@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Community Park Cleanup",
+    "category": "Environment",
+    "date": "2026-06-06",
+    "seats": 25,
+    "description": "Help us clean up Oakwood Park! Garbage bags, gloves, and free morning coffee/donuts will be provided for all volunteers.",
+    "image": "assets/images/cleanup.png"
+  },
+  {
+    "id": 2,
+    "name": "Local Farmers Market",
+    "category": "Food",
+    "date": "2026-06-07",
+    "seats": 40,
+    "description": "Support our local farmers and artisans. Come by to buy fresh vegetables, homemade jams, pastries, and handmade crafts.",
+    "image": "assets/images/market.png"
+  },
+  {
+    "id": 3,
+    "name": "Annual Charity 5K Run",
+    "category": "Sports",
+    "date": "2026-06-13",
+    "seats": 15,
+    "description": "Join the annual fun run to raise funds for the Greenwood Public Library. All fitness levels are welcome to walk or run.",
+    "image": "assets/images/run.png"
+  },
+  {
+    "id": 4,
+    "name": "Summer Acoustic Concert",
+    "category": "Music",
+    "date": "2026-06-20",
+    "seats": 0,
+    "description": "Enjoy a beautiful evening of live music in the park with local singer-songwriters. Bring your own blankets and lawn chairs.",
+    "image": "assets/images/run.png"
+  },
+  {
+    "id": 5,
+    "name": "Jazz in the Square",
+    "category": "Music",
+    "date": "2026-06-27",
+    "seats": 30,
+    "description": "An outdoor jazz event featuring local bands. Delicious food trucks and beverage vendors will be on-site.",
+    "image": "assets/images/cleanup.png"
+  }
+]

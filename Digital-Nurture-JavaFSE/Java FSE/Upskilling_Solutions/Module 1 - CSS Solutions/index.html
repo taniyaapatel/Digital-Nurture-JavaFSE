@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenwood Community Hub - Local Events & News</title>
+  
+  <!-- internal CSS block for body background fallback as requested in task 1 -->
+  <style>
+    body {
+      /* Fallback background color and default setup */
+      background-color: #f7f9fa;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- Top navigation bar -->
+  <nav class="topNav">
+    <div class="navContainer">
+      <a href="#" class="navLogo">Greenwood Hub</a>
+      <ul class="navList">
+        <li><a href="#events" class="navLink">Upcoming Events</a></li>
+        <li><a href="#schedule" class="navLink">Schedule</a></li>
+        <li><a href="#news" class="navLink">Bulletin Board</a></li>
+        <li><a href="#join" class="navLink">Join Us</a></li>
+        <li><a href="#box-test" class="navLink">Layout Demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Header Banner (using ID mainHeader) -->
+  <header id="mainHeader">
+    <div class="bannerText">
+      <!-- Inline style to make heading red as requested in Task 1 -->
+      <h1 style="color: #c93b2b;">Welcome to Greenwood Community Hub</h1>
+      <p>Connecting neighbors, supporting local businesses, and sharing local events.</p>
+      <a href="#events" class="bannerBtn">Browse Events</a>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="mainContent">
+
+    <!-- Section 1: Upcoming Events -->
+    <section id="events" class="sectionBlock">
+      <h2 class="sectionTitle">Upcoming Community Events</h2>
+      <p class="sectionDesc">Check out what's happening around town this weekend. Click on any event to RSVP.</p>
+      
+      <div class="eventsGrid">
+        
+        <!-- Event Card 1 -->
+        <div class="eventCard">
+          <div class="cardImgWrapper">
+            <img src="assets/images/cleanup.png" alt="Community Park Cleanup" class="eventImg">
+          </div>
+          <div class="cardContent">
+            <h3>Community Park Cleanup</h3>
+            <p class="eventDate">Saturday, June 6 at 9:00 AM</p>
+            <p class="eventDetail">Help us clean up Oakwood Park! Garbage bags, gloves, and free morning coffee/donuts will be provided for all volunteers.</p>
+            <a href="#" class="joinBtn">Volunteer Now</a>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="eventCard">
+          <div class="cardImgWrapper">
+            <img src="assets/images/market.png" alt="Local Farmers Market" class="eventImg">
+          </div>
+          <div class="cardContent">
+            <h3>Local Farmers Market</h3>
+            <p class="eventDate">Sunday, June 7 at 8:00 AM</p>
+            <p class="eventDetail">Support our local farmers and artisans. Come by to buy fresh vegetables, homemade jams, pastries, and handmade crafts.</p>
+            <a href="#" class="joinBtn">View Vendors</a>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="eventCard">
+          <div class="cardImgWrapper">
+            <img src="assets/images/run.png" alt="Charity Fun Run" class="eventImg">
+          </div>
+          <div class="cardContent">
+            <h3>Annual Charity 5K Run</h3>
+            <p class="eventDate">Saturday, June 13 at 7:30 AM</p>
+            <p class="eventDetail">Join the annual fun run to raise funds for the Greenwood Public Library. All fitness levels are welcome to walk or run.</p>
+            <a href="#" class="joinBtn">Register Here</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: Table Section -->
+    <section id="schedule" class="sectionBlock altBg">
+      <h2 class="sectionTitle">Admin Schedule & Resource Booking</h2>
+      <p class="sectionDesc">Reservation schedule for the community hall rooms. Contact us to reserve a room.</p>
+      
+      <div class="tableWrapper">
+        <table class="scheduleTable">
+          <thead>
+            <tr>
+              <th>Room Name</th>
+              <th>Capacity</th>
+              <th>Available Hours</th>
+              <th>Daily Rate</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Main Hall</td>
+              <td>150 People</td>
+              <td>8:00 AM - 10:00 PM</td>
+              <td>$100 / hr</td>
+              <td>Booked</td>
+            </tr>
+            <tr>
+              <td>Conference Room A</td>
+              <td>20 People</td>
+              <td>9:00 AM - 6:00 PM</td>
+              <td>$30 / hr</td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td>Craft Workshop Room</td>
+              <td>40 People</td>
+              <td>8:00 AM - 8:00 PM</td>
+              <td>$40 / hr</td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td>Outdoor Pavilion</td>
+              <td>80 People</td>
+              <td>7:00 AM - Sunset</td>
+              <td>$50 / hr</td>
+              <td>Booked</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Multi-column Newspaper Bulletin -->
+    <section id="news" class="sectionBlock">
+      <h2 class="sectionTitle">Community Bulletin Board</h2>
+      <p class="sectionDesc">Read recent announcements and letters from the Greenwood Town Council.</p>
+      
+      <div class="bulletinPaper">
+        <h3>A Message from the Town Council</h3>
+        <p class="bulletinMeta">Published by Council Secretary on May 28, 2026</p>
+        
+        <!-- Multi-column news article -->
+        <article class="newsArticle">
+          <p>
+            Dear neighbors, we are excited to announce several new initiatives starting this summer season. 
+            First, our park renovation projects are officially underway. We are upgrading the playground 
+            equipment at Oakwood Park and installing new benches along the walking trails. We hope these 
+            updates make our parks more accessible and enjoyable for families and seniors alike. We ask for your 
+            patience during the construction phases as certain areas of the park may be temporarily cordoned off 
+            for safety reasons.
+          </p>
+          <p>
+            In addition to park upgrades, we are partnering with the county to host monthly recycling clinics. 
+            These clinics will educate households on proper waste sorting techniques and provide resources for 
+            disposing of electronics and hazardous chemicals safely. Proper waste management is critical 
+            to keeping Greenwood clean and protecting our local waterways and wildlife.
+          </p>
+          <p>
+            Lastly, we encourage everyone to join our upcoming town hall meetings. These meetings occur on 
+            the first Tuesday of every month at the Main Hall. Your voices and opinions are vital as we shape the 
+            future development plans of our community. We look forward to hearing your ideas, addressing your 
+            concerns, and working together to keep Greenwood a wonderful place to live, work, and grow.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Display vs Visibility Comparison (Task 8 demo) -->
+    <section id="box-test" class="sectionBlock altBg">
+      <h2 class="sectionTitle">Layout & Layout Control Experiment</h2>
+      <p class="sectionDesc">Below is an interactive demonstration for understanding the difference between display: none and visibility: hidden. Both boxes are hidden, but notice the layout difference!</p>
+      
+      <div class="layoutDemoGrid">
+        <div class="demoContainer">
+          <h4>Original Cards (For reference)</h4>
+          <div class="demoRow">
+            <div class="demoBox normalBox">Card A</div>
+            <div class="demoBox normalBox">Card B</div>
+            <div class="demoBox normalBox">Card C</div>
+          </div>
+        </div>
+
+        <div class="demoContainer">
+          <h4>Display: None (Card B Hidden)</h4>
+          <div class="demoRow">
+            <div class="demoBox normalBox">Card A</div>
+            <div class="demoBox displayNoneBox">Card B</div> <!-- hidden with display: none -->
+            <div class="demoBox normalBox">Card C</div>
+          </div>
+          <span class="demoNotes">Note: Card B is completely removed from the layout. Card C slides over next to Card A.</span>
+        </div>
+
+        <div class="demoContainer">
+          <h4>Visibility: Hidden (Card B Hidden)</h4>
+          <div class="demoRow">
+            <div class="demoBox normalBox">Card A</div>
+            <div class="demoBox visibilityHiddenBox">Card B</div> <!-- hidden with visibility: hidden -->
+            <div class="demoBox normalBox">Card C</div>
+          </div>
+          <span class="demoNotes">Note: Card B is invisible, but it still occupies its original space in the document flow.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Form section -->
+    <section id="join" class="sectionBlock">
+      <h2 class="sectionTitle">Get Involved with Greenwood</h2>
+      <p class="sectionDesc">Submit this form to sign up for newsletters or apply to host a local event.</p>
+      
+      <div class="formWrapper">
+        <form class="joinForm" action="#" method="get" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+          <div class="formGroup">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Jane Doe" required>
+          </div>
+          
+          <div class="formGroup">
+            <label for="emailAddress">Email Address</label>
+            <input type="email" id="emailAddress" placeholder="jane.doe@example.com" required>
+          </div>
+          
+          <div class="formGroup">
+            <label for="interestSelect">Areas of Interest</label>
+            <select id="interestSelect">
+              <option value="volunteer">Volunteer Cleanups</option>
+              <option value="market">Selling at Farmers Market</option>
+              <option value="sports">Community Sports Events</option>
+              <option value="general">General Updates & Newsletters</option>
+            </select>
+          </div>
+          
+          <div class="formGroup">
+            <label for="messageText">Introduce Yourself (Optional)</label>
+            <textarea id="messageText" rows="4" placeholder="Tell us a little bit about yourself..."></textarea>
+          </div>
+          
+          <div class="formCheck">
+            <input type="checkbox" id="agreeCheck" required>
+            <label for="agreeCheck">I agree to receive community updates and volunteer announcements.</label>
+          </div>
+          
+          <button type="submit" class="submitBtn">Send Application</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Area -->
+  <footer class="mainFooter">
+    <div class="footerContainer">
+      <div class="footerInfo">
+        <p>&copy; 2026 Greenwood Community Council. All rights reserved.</p>
+        <p>Contact: <a href="mailto:info@greenwoodcommunity.org">info@greenwoodcommunity.org</a> | Phone: (555) 123-4567</p>
+      </div>
+      <div class="footerLinks">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Admin Login</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

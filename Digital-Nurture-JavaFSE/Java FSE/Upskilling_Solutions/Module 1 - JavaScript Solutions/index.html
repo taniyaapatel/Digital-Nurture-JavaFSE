@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenwood Community Portal - Events Management</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Include jQuery library first as requested -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <!-- Include main.js containing our JS exercises solutions -->
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="topNav">
+    <div class="navContainer">
+      <a href="#" class="navLogo">Greenwood Portal</a>
+      <ul class="navList">
+        <li><a href="index.html" class="navLink active">Events Hub</a></li>
+        <li><a href="pages/register.html" class="navLink">Register Event</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner Header -->
+  <header id="mainHeader">
+    <div class="bannerText">
+      <h1>Greenwood Local Event Portal</h1>
+      <p>Stay updated, register for workshops, and connect with neighbors.</p>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <main class="mainContent">
+
+    <!-- Interactive Intro Section (used for jQuery demo) -->
+    <section id="introContainer" class="sectionBlock">
+      <div id="introText">
+        <h3>About the Portal</h3>
+        <p>This is a community-run portal to showcase local cleanups, baking workshops, and open-mic concerts. Below, you can search and filter events in real-time. Feel free to click "Register" on any available event card.</p>
+      </div>
+      <button id="toggleIntroBtn" class="actionBtn">Toggle Intro Info</button>
+      <span class="tipText">(This button uses jQuery click & toggle effects)</span>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="controlsSection">
+      <div class="controlGroup">
+        <label for="searchInput">Search by Keyword:</label>
+        <input type="text" id="searchInput" placeholder="Type event name (e.g. concert)...">
+      </div>
+      
+      <div class="controlGroup">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="Environment">Environment</option>
+          <option value="Food">Food</option>
+          <option value="Sports">Sports</option>
+          <option value="Music">Music</option>
+        </select>
+      </div>
+
+      <div class="registrationCounter">
+        <span>Global Registrations Today: </span>
+        <strong id="globalRegCount">0</strong>
+      </div>
+    </section>
+
+    <!-- Events Display Section -->
+    <section class="eventsSection">
+      <h2>Available Events</h2>
+      
+      <!-- Loading spinner element (Task 9 requirement) -->
+      <div id="loadingSpinner" class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <p>Loading events from database...</p>
+      </div>
+
+      <!-- Container where event cards are generated dynamically (Task 7) -->
+      <div id="eventsGrid" class="eventsGrid" style="display: none;"></div>
+      
+      <div id="noEventsMessage" class="errorBox" style="display: none;">
+        No events match your criteria. Please try another search keyword or category.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mainFooter">
+    <p>&copy; 2026 Greenwood Community Hub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

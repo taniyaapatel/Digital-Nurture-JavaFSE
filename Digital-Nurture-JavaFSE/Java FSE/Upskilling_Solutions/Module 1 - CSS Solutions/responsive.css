@@ -1,0 +1,132 @@
+/*
+  Responsive Styling Sheet for Module 1 - CSS Solutions
+  Handles layout transformations on tablets and mobile screens
+*/
+
+/* Mobile and Tablet viewports - Screens smaller than 768px */
+@media screen and (max-width: 768px) {
+
+  /* Body settings */
+  body {
+    font-size: 95%; /* slightly reduce font scaling globally */
+  }
+
+  /* Navigation: Stack items vertically as requested */
+  .navContainer {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navLogo {
+    margin-bottom: 10px;
+  }
+
+  .navList {
+    flex-direction: column; /* stack links vertically */
+    width: 100%;
+    text-align: center;
+  }
+
+  .navList li {
+    margin-left: 0;
+    margin-bottom: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navList li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  /* Banner sizing adjustments using flexible viewport height/width units */
+  #mainHeader {
+    padding: 8vh 4vw; /* responsive padding using vh and vw */
+  }
+
+  .bannerText h1 {
+    font-size: 6vw; /* responsive font size using vw */
+    line-height: 1.2;
+  }
+
+  .bannerText p {
+    font-size: 1rem;
+    padding: 0 5%; /* percentage padding */
+  }
+
+  /* Sections adjustments */
+  .sectionBlock {
+    padding: 30px 15px; /* smaller padding for compact screens */
+    margin-bottom: 25px;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  /* Events Grid: stack the cards vertically using Flexbox */
+  .eventsGrid {
+    flex-direction: column; /* stack event cards vertically */
+    gap: 20px;
+  }
+
+  .eventCard {
+    width: 100%; /* take full width of container */
+    margin-bottom: 10px;
+  }
+
+  .cardImgWrapper {
+    height: 160px; /* slightly reduce image container height on smaller screens */
+  }
+
+  /* Newspaper Multi-column layout: Stack columns on mobile */
+  .newsArticle {
+    column-count: 1; /* stack back into a single column for readability */
+    column-gap: 0;
+    column-rule: none;
+  }
+
+  /* Schedule Table wrapper */
+  .scheduleTable th, .scheduleTable td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Layout Demo Grid */
+  .layoutDemoGrid {
+    flex-direction: column;
+  }
+
+  /* Footer Layout changes */
+  .footerContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footerLinks a {
+    margin-left: 0;
+  }
+}
+
+/* Extra small mobile devices - screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  
+  .bannerText h1 {
+    font-size: 2rem;
+  }
+  
+  .formWrapper {
+    padding: 15px;
+  }
+  
+  .submitBtn {
+    width: 100%; /* make button full-width on mobile */
+  }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenwood Portal - Register for Event</title>
+  <!-- Link stylesheet relative to the pages folder -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Include jQuery library first as requested -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="topNav">
+    <div class="navContainer">
+      <a href="../index.html" class="navLogo">Greenwood Portal</a>
+      <ul class="navList">
+        <li><a href="../index.html" class="navLink">Events Hub</a></li>
+        <li><a href="register.html" class="navLink active">Register Event</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner Header -->
+  <header id="mainHeader">
+    <div class="bannerText">
+      <h1>Event RSVP Form</h1>
+      <p>Secure your spot at our upcoming community activities.</p>
+    </div>
+  </header>
+
+  <!-- Form content -->
+  <main class="mainContent">
+    <div class="formWrapper">
+      <h2>Submit Registration</h2>
+      
+      <!-- Container for submission messages -->
+      <div id="formFeedback"></div>
+      
+      <form class="registerForm" id="rsvpForm" novalidate>
+        
+        <!-- Full Name (Task 11) -->
+        <div class="formGroup">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Jane Doe">
+          <span id="nameError" class="errorText">Name is required and must be at least 3 letters.</span>
+        </div>
+        
+        <!-- Email (Task 11) -->
+        <div class="formGroup">
+          <label for="emailAddress">Email Address:</label>
+          <input type="email" id="emailAddress" name="emailAddress" placeholder="jane.doe@example.com">
+          <span id="emailError" class="errorText">Please enter a valid email address (e.g. name@domain.com).</span>
+        </div>
+        
+        <!-- Event Dropdown Selection (Task 11) -->
+        <div class="formGroup">
+          <label for="eventSelect">Select Event:</label>
+          <select id="eventSelect" name="eventSelect">
+            <option value="">-- Choose an Event --</option>
+            <option value="1">Community Park Cleanup (June 6)</option>
+            <option value="2">Local Farmers Market (June 7)</option>
+            <option value="3">Annual Charity 5K Run (June 13)</option>
+            <option value="5">Jazz in the Square (June 27)</option>
+          </select>
+          <span id="eventError" class="errorText">Please select an event from the list.</span>
+        </div>
+        
+        <!-- Agreement Checkbox -->
+        <div class="formCheck">
+          <input type="checkbox" id="agreeCheck" name="agreeCheck">
+          <label for="agreeCheck">I agree to receive event reminder emails and notices.</label>
+          <span id="agreeError" class="errorText" style="display:block; margin-top:2px;"></span>
+        </div>
+        
+        <button type="submit" class="submitBtn" id="registerBtn">Submit RSVP</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mainFooter">
+    <p>&copy; 2026 Greenwood Community Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Inline Script for form capture, validations, and fetch POST calls (Task 11, 12, 13) -->
+  <script>
+    console.log("Register page script initialized");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const rsvpForm = document.getElementById("rsvpForm");
+      const feedbackDiv = document.getElementById("formFeedback");
+      const submitBtn = document.getElementById("registerBtn");
+
+      // Clear inline errors helper
+      function resetErrors() {
+        const errorSpans = document.querySelectorAll(".errorText");
+        errorSpans.forEach(span => {
+          if (span.id !== "agreeError") {
+            span.style.display = "none";
+          } else {
+            span.textContent = "";
+          }
+        });
+      }
+
+      // Check validation constraints (Task 11)
+      function validateForm(elements) {
+        let isValid = true;
+        resetErrors();
+
+        // 1. Validate name
+        const nameVal = elements["fullName"].value.trim();
+        if (nameVal === "" || nameVal.length < 3) {
+          document.getElementById("nameError").style.display = "block";
+          isValid = false;
+          console.log("Validation failed: Name is empty or too short");
+        }
+
+        // 2. Validate email
+        const emailVal = elements["emailAddress"].value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailVal === "" || !emailRegex.test(emailVal)) {
+          document.getElementById("emailError").style.display = "block";
+          isValid = false;
+          console.log("Validation failed: Email format is invalid");
+        }
+
+        // 3. Validate Event Choice
+        const eventVal = elements["eventSelect"].value;
+        if (eventVal === "") {
+          document.getElementById("eventError").style.display = "block";
+          isValid = false;
+          console.log("Validation failed: No event selected");
+        }
+
+        // 4. Validate Checkbox
+        const isChecked = elements["agreeCheck"].checked;
+        if (!isChecked) {
+          const agreeErr = document.getElementById("agreeError");
+          agreeErr.textContent = "You must agree to the terms.";
+          agreeErr.style.color = "#e53e3e";
+          isValid = false;
+          console.log("Validation failed: Agreement checkbox not checked");
+        }
+
+        return isValid;
+      }
+
+      // Submit listener
+      rsvpForm.addEventListener("submit", async (event) => {
+        // Prevent default submission refresh (Task 11)
+        event.preventDefault();
+        
+        console.log("RSVP form submission triggered");
+
+        // Access form fields using form.elements (Task 11)
+        const formElements = rsvpForm.elements;
+        
+        // Log inputs for debugging (Task 13)
+        console.log("Submitted Values:", {
+          name: formElements["fullName"].value,
+          email: formElements["emailAddress"].value,
+          eventId: formElements["eventSelect"].value,
+          agreed: formElements["agreeCheck"].checked
+        });
+
+        // Check validation
+        if (!validateForm(formElements)) {
+          feedbackDiv.innerHTML = `<div class="errorBox">Submission failed. Please fix the highlighted errors below.</div>`;
+          console.log("Form validation failed. Aborting fetch call.");
+          return;
+        }
+
+        // Show loading state and disable submit button (Task 12 spinner simulation)
+        feedbackDiv.innerHTML = `<div class="successBox" style="background-color: #ebf8ff; border-color: #bee3f8; color: #2b6cb0;">Processing your request... Please wait.</div>`;
+        submitBtn.disabled = true;
+
+        // Simulate network latency using setTimeout wrapped in a promise
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        // Create payload
+        const rsvpData = {
+          fullName: formElements["fullName"].value,
+          email: formElements["emailAddress"].value,
+          eventId: formElements["eventSelect"].value
+        };
+
+        // POST request to mock JSON placeholder API (Task 12)
+        console.log("Sending POST payload to mock API:", rsvpData);
+
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(rsvpData)
+        })
+        .then(response => {
+          console.log("Mock API responded with HTTP status:", response.status);
+          if (!response.ok) {
+            throw new Error("Server responded with error status code.");
+          }
+          return response.json();
+        })
+        .then(responseData => {
+          console.log("Response payload parsed successfully:", responseData);
+          
+          // Show success message to user (Task 12 success message)
+          feedbackDiv.innerHTML = `
+            <div class="successBox">
+              <strong>Registration Confirmed!</strong><br>
+              Thank you, ${rsvpData.fullName}. A confirmation email has been sent to ${rsvpData.email}.<br>
+              <span style="font-size: 0.8rem; color: #2f855a;">(Server Response ID: ${responseData.id})</span>
+            </div>
+          `;
+          
+          // Reset form fields
+          rsvpForm.reset();
+        })
+        .catch(err => {
+          console.error("Fetch registration request failed:", err);
+          // Show error message (Task 12 failure message)
+          feedbackDiv.innerHTML = `<div class="errorBox">Could not submit registration. Reason: ${err.message}</div>`;
+        })
+        .finally(() => {
+          // Enable button back
+          submitBtn.disabled = false;
+        });
+
+      });
+
+      // Task 14 literal compliance: jQuery click handler on '#registerBtn'
+      $("#registerBtn").click(function() {
+        console.log("[Task 14 jQuery click] Detected submit click on registerBtn via jQuery");
+      });
+    });
+  </script>
+</body>
+</html>
