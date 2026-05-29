@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4.2: Four-Column Layout</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .stat-card {
+      border: none;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Greenwood Portal Analytics</h2>
+    <p class="text-muted mb-5">Four-column statistical overview displaying dynamic equal widths.</p>
+
+    <!-- Four equal columns using col-sm-3 (Task 4.2) -->
+    <div class="row g-4">
+      <!-- Stat 1 -->
+      <div class="col-sm-3">
+        <div class="stat-card bg-white">
+          <h1 class="display-5 fw-bold text-primary">1,240</h1>
+          <p class="text-muted mb-0 fw-semibold">Active Members</p>
+        </div>
+      </div>
+      
+      <!-- Stat 2 -->
+      <div class="col-sm-3">
+        <div class="stat-card bg-white">
+          <h1 class="display-5 fw-bold text-success">42</h1>
+          <p class="text-muted mb-0 fw-semibold">Hosted Events</p>
+        </div>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="col-sm-3">
+        <div class="stat-card bg-white">
+          <h1 class="display-5 fw-bold text-warning">15</h1>
+          <p class="text-muted mb-0 fw-semibold">Active Groups</p>
+        </div>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="col-sm-3">
+        <div class="stat-card bg-white">
+          <h1 class="display-5 fw-bold text-danger">98%</h1>
+          <p class="text-muted mb-0 fw-semibold">Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 4.2: Four Equal Columns",
+    "description": "Create a four-column layout (col-sm-3) with equal width.",
+    "classes": [".container", ".row", ".g-4", ".col-sm-3", ".bg-white", ".display-5", ".fw-bold", ".text-primary", ".text-success", ".text-warning", ".text-danger"],
+    "responsive": "On screens >= 576px (small devices/tablets/desktops), cards align side-by-side (each taking 3 cols / 25%). On screens < 576px (mobile/extra small), they stack vertically taking 100% width.",
+    "comments": "Utilizes the small grid tier breakpoint (col-sm-3) which forces the 4-column side-by-side grid to collapse to stack only on mobile devices."
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 13.1: Contextual Dashboard Colors</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .color-card {
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Community Hub Admin Dashboard</h2>
+    <p class="text-muted mb-5 lead">Using contextual backgrounds to communicate dashboard block categories.</p>
+
+    <!-- Contextual Grid Cards (Task 13.1) -->
+    <div class="row g-4 text-start">
+      
+      <!-- Primary bg-primary (White Text) -->
+      <div class="col-sm-6 col-md-3">
+        <div class="card color-card bg-primary text-white p-4 shadow-sm h-100">
+          <h6 class="text-uppercase fw-bold text-white-50">Total Registrations</h6>
+          <h2 class="display-6 fw-bold my-2">1,480</h2>
+          <p class="small mb-0">&#9650; 12% increase this month</p>
+        </div>
+      </div>
+
+      <!-- Success bg-success (White Text) -->
+      <div class="col-sm-6 col-md-3">
+        <div class="card color-card bg-success text-white p-4 shadow-sm h-100">
+          <h6 class="text-uppercase fw-bold text-white-50">Green Volunteers</h6>
+          <h2 class="display-6 fw-bold my-2">320</h2>
+          <p class="small mb-0">&#127793; Active in 4 garden sites</p>
+        </div>
+      </div>
+
+      <!-- Warning bg-warning (Dark Text - Accessibility check!) -->
+      <div class="col-sm-6 col-md-3">
+        <div class="card color-card bg-warning text-dark p-4 shadow-sm h-100">
+          <h6 class="text-uppercase fw-bold text-black-50">Desk Capacity</h6>
+          <h2 class="display-6 fw-bold my-2">85%</h2>
+          <p class="small mb-0">&#9888; High workspace bookings</p>
+        </div>
+      </div>
+
+      <!-- Danger bg-danger (White Text) -->
+      <div class="col-sm-6 col-md-3">
+        <div class="card color-card bg-danger text-white p-4 shadow-sm h-100">
+          <h6 class="text-uppercase fw-bold text-white-50">Reported Issues</h6>
+          <h2 class="display-6 fw-bold my-2">3</h2>
+          <p class="small mb-0">&#10006; Awaiting support review</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 13.1: Context Colors",
+    "description": "Create a dashboard page using contextual background classes (bg-primary, bg-success, bg-warning, bg-danger) and corresponding text colors.",
+    "classes": [".container", ".row", ".col-sm-6", ".col-md-3", ".card", ".bg-primary", ".bg-success", ".bg-warning", ".bg-danger", ".text-white", ".text-dark", ".text-white-50", ".text-black-50", ".display-6", ".shadow-sm"],
+    "responsive": "Dashboard modules scale from four-in-a-row on desktop/tablets down to stacked full-width layout on extra-small mobile viewports.",
+    "comments": "Utilizes standard contextual color classes. The Warning card uses dark text color (text-dark / text-black-50) to preserve standard contrast ratios."
+  }
+  </script>
+</body>
+</html>

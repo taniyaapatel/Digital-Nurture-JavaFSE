@@ -1,13 +1,20 @@
-
 public class PatternMatchingSwitch {
+
     public static void checkType(Object o) {
-        String msg = switch (o) {
-            case Integer i -> "It is an Integer: " + i;
-            case String s -> "It is a String: " + s;
-            case Double d -> "It is a Double: " + d;
-            case null -> "It is null!";
-            default -> "Unknown type: " + o.toString();
-        };
+        String msg;
+
+        if (o instanceof Integer i) {
+            msg = "It is an Integer: " + i;
+        } else if (o instanceof String s) {
+            msg = "It is a String: " + s;
+        } else if (o instanceof Double d) {
+            msg = "It is a Double: " + d;
+        } else if (o == null) {
+            msg = "It is null!";
+        } else {
+            msg = "Unknown type: " + o.getClass().getName();
+        }
+
         System.out.println(msg);
     }
 

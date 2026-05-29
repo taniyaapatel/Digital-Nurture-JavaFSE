@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 6.2: Flexbox Card Alignment</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Flexbox Card Lists</h2>
+    <p class="text-center text-muted mb-5">Aligning title elements and interactive options inside card bodies.</p>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        
+        <!-- Card 1 -->
+        <div class="card shadow-sm border-0 mb-3">
+          <!-- justify-content-between: pushes items to outer edges -->
+          <!-- align-items-center: centers items vertically in the box -->
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+              <span class="badge bg-primary mb-1">Workshop</span>
+              <h5 class="card-title fw-bold mb-0">French Baking Workshop</h5>
+              <small class="text-muted">Saturday, 10:00 AM @ Community Kitchen</small>
+            </div>
+            <div>
+              <button class="btn btn-primary btn-sm">Reserve Seat</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card shadow-sm border-0 mb-3">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+              <span class="badge bg-success mb-1">Environment</span>
+              <h5 class="card-title fw-bold mb-0">Lakeside Cleaning Drive</h5>
+              <small class="text-muted">Sunday, 08:30 AM @ Greenwood Lake</small>
+            </div>
+            <div>
+              <button class="btn btn-success btn-sm">Join Group</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card shadow-sm border-0 mb-3">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+              <span class="badge bg-warning text-dark mb-1">Social</span>
+              <h5 class="card-title fw-bold mb-0">Acoustic Music Night</h5>
+              <small class="text-muted">Friday, 07:00 PM @ Library Hall</small>
+            </div>
+            <div>
+              <span class="badge bg-secondary p-2">Fully Booked</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 6.2: Flex Cards",
+    "description": "Create a card layout using flexbox spacing utilities: justify-content-between and align-items-center.",
+    "classes": [".card", ".card-body", ".d-flex", ".justify-content-between", ".align-items-center", ".badge", ".bg-primary", ".bg-success", ".bg-warning", ".btn-primary", ".btn-success"],
+    "responsive": "Maintains aligned elements side-by-side on all viewports, scaling margins dynamically. The flex container prevents vertical layout breakage.",
+    "comments": "Uses .d-flex to turn card-body into a flex container. .justify-content-between separates the text details from action buttons, and .align-items-center centers them vertically."
+  }
+  </script>
+</body>
+</html>

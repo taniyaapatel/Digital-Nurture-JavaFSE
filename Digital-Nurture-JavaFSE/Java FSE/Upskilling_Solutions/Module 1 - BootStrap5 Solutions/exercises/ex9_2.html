@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 9.2: Button Groups & Toggles</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Button Groups & Toggles</h2>
+    <p class="text-center text-muted mb-5 lead">Aligning multiple buttons together and styling check input tags as toggle actions.</p>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Button Group (btn-group) -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm border-0 h-100">
+          <h5 class="fw-bold mb-3 text-primary">Standard Button Group</h5>
+          <p class="text-muted small">Aligns multiple buttons inline inside a unified border border-block.</p>
+          <div class="btn-group w-100" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-success">Weekly</button>
+            <button type="button" class="btn btn-success active">Monthly</button>
+            <button type="button" class="btn btn-outline-success">Annual</button>
+          </div>
+          <p class="small text-muted mt-3 mb-0">Useful for pagination, view tabs, or basic settings toggle toggles.</p>
+        </div>
+      </div>
+
+      <!-- Button Radios (Toggles) -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm border-0 h-100">
+          <h5 class="fw-bold mb-3 text-success">Checkbox & Radio Button Toggles</h5>
+          <p class="text-muted small">Input checkbox and radio tags styled natively as interactive buttons.</p>
+          
+          <!-- Radio Toggles -->
+          <h6 class="fw-semibold text-dark mb-2">Notification Frequency:</h6>
+          <div class="btn-group w-100 mb-3" role="group" aria-label="Radio toggle group">
+            <input type="radio" class="btn-check" name="frequencyRadio" id="radio1" checked>
+            <label class="btn class btn-outline-primary" for="radio1">Instantly</label>
+
+            <input type="radio" class="btn-check" name="frequencyRadio" id="radio2">
+            <label class="btn class btn-outline-primary" for="radio2">Daily Digest</label>
+
+            <input type="radio" class="btn-check" name="frequencyRadio" id="radio3">
+            <label class="btn class btn-outline-primary" for="radio3">None</label>
+          </div>
+
+          <!-- Checkbox Toggles -->
+          <h6 class="fw-semibold text-dark mb-2">Topics of Interest:</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <input type="checkbox" class="btn-check" id="btncheck1" checked autocomplete="off">
+            <label class="btn btn-outline-dark btn-sm" for="btncheck1">Garden</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline-dark btn-sm" for="btncheck2">Markets</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+            <label class="btn btn-outline-dark btn-sm" for="btncheck3">Library</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 9.2: Button Groups",
+    "description": "Create button groups, toggle buttons, and checkbox buttons using Bootstrap.",
+    "classes": [".container", ".row", ".col-md-6", ".card", ".btn-group", ".btn-check", ".btn-outline-success", ".btn-outline-primary", ".btn-outline-dark", ".active"],
+    "responsive": "Button groups stretch cleanly inside grid cells. Checkbox labels automatically wrap when screen width collapses on mobile.",
+    "comments": "The btn-check class hides the standard radio/checkbox circle icons, allowing the associated label styles (styled with button classes) to handle the active selection state visually."
+  }
+  </script>
+</body>
+</html>

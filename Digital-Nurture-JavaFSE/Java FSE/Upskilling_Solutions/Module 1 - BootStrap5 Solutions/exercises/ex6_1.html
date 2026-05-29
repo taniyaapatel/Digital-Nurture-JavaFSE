@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 6.1: Flexbox Responsive Navbar</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .flex-nav {
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Responsive Flexbox Navbar</h2>
+    <p class="text-center text-muted mb-5">Demonstrating flex directions: vertical on mobile, horizontal on desktops.</p>
+
+    <!-- Custom navbar built with flex utilities (Task 6.1) -->
+    <!-- d-flex: activates flexbox -->
+    <!-- flex-column: stacks children vertically on mobile -->
+    <!-- flex-md-row: aligns children horizontally on medium screens and up -->
+    <!-- align-items-center: centers elements vertically in row mode, horizontally in column mode -->
+    <div class="flex-nav d-flex flex-column flex-md-row align-items-center justify-content-between p-3 shadow-sm mb-4">
+      <div class="logo fw-bold text-success fs-4 mb-3 mb-md-0">
+        Greenwood Hub
+      </div>
+      
+      <div class="nav-links d-flex flex-column flex-md-row gap-3 text-center w-100 w-md-auto mb-3 mb-md-0">
+        <a href="#" class="text-decoration-none text-dark fw-semibold">Home</a>
+        <a href="#" class="text-decoration-none text-muted">Announcements</a>
+        <a href="#" class="text-decoration-none text-muted">Community Projects</a>
+        <a href="#" class="text-decoration-none text-muted">Helpdesk</a>
+      </div>
+
+      <button class="btn btn-success w-100 w-md-auto">Register RSVP</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 6.1: Flex Navbar",
+    "description": "Create a responsive navbar using flex utilities: d-flex, flex-column, and flex-md-row for responsive behavior.",
+    "classes": [".d-flex", ".flex-column", ".flex-md-row", ".align-items-center", ".justify-content-between", ".p-3", ".shadow-sm", ".gap-3", ".btn-success"],
+    "responsive": "On viewports < 768px (mobile), children stack vertically. Link lists and registration button stretch full-width. On viewports >= 768px (desktops), the navbar aligns horizontally, placing links centered and the button to the far right.",
+    "comments": "This custom navbar leverages direct Flexbox utility controls rather than the complex collapse plugin framework, offering a lightweight alternative."
+  }
+  </script>
+</body>
+</html>

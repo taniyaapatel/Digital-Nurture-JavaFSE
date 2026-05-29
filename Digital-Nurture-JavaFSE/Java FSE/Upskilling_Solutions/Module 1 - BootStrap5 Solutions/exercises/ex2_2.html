@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2.2: JavaScript Plugins Demo</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Bootstrap JS Plugins Demonstration</h2>
+    <p class="text-muted mb-5 lead">Interactive behaviors driven by <code>bootstrap.bundle.min.js</code>.</p>
+    
+    <div class="row justify-content-center g-4">
+      <!-- Modal Trigger Section -->
+      <div class="col-md-5">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="fw-bold mb-3">Newsletter Modal</h5>
+          <p class="text-muted mb-4">Click below to open a modal popup styled for community notice subscription.</p>
+          <button type="button" class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#newsletterModal">
+            Launch Newsletter Modal
+          </button>
+        </div>
+      </div>
+
+      <!-- Dropdown Section -->
+      <div class="col-md-5">
+        <div class="card p-4 shadow-sm h-100">
+          <h5 class="fw-bold mb-3">Action Dropdown Menu</h5>
+          <p class="text-muted mb-4">Click the button below to toggle a clean dropdown menu containing quick actions.</p>
+          <div class="dropdown mt-auto">
+            <button class="btn btn-success dropdown-toggle w-100" type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Quick Actions
+            </button>
+            <ul class="dropdown-menu w-100" aria-labelledby="actionDropdown">
+              <li><a class="dropdown-item" href="#">Subscribe Alert</a></li>
+              <li><a class="dropdown-item" href="#">Download Schedule</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#">Report Issue</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscription Modal definition -->
+  <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="newsletterModalLabel">Subscribe to Greenwood News</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-start">
+          <p class="text-muted">Enter your email address to receive weekly updates on townhall meetings, recycling events, and local markets.</p>
+          <form>
+            <div class="mb-3">
+              <label for="subEmail" class="form-label fw-semibold">Email address</label>
+              <input type="email" class="form-control" id="subEmail" placeholder="name@example.com" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="alert('Subscription saved!');" data-bs-dismiss="modal">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 2.2: JS Bundle",
+    "description": "Modify your HTML to include Bootstrap's JavaScript plugins via bootstrap.bundle.min.js and demonstrate a working Modal and Dropdown.",
+    "classes": [".modal", ".fade", ".modal-dialog", ".modal-dialog-centered", ".modal-content", ".modal-header", ".modal-body", ".modal-footer", ".btn-close", ".dropdown", ".dropdown-toggle", ".dropdown-menu", ".dropdown-item", ".dropdown-divider"],
+    "responsive": "Modal is vertically centered and responsive. Dropdown spans full-width of the container on smaller screens.",
+    "comments": "The file uses local assets and popper integration contained inside the bundle JS file to handle the backdrop triggers and focus toggles automatically."
+  }
+  </script>
+</body>
+</html>

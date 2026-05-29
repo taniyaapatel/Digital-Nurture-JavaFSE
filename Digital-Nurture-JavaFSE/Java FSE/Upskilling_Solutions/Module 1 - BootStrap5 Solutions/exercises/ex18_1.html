@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 18.1: JavaScript Modal Popup</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center py-5">
+    <h2 class="fw-bold mb-3">JavaScript Modal Plugin</h2>
+    <p class="text-muted mb-5 lead">Using Bootstrap's native Modal javascript plugin to open interactive boxes on click.</p>
+
+    <!-- Modal Trigger Button (Task 18.1) -->
+    <!-- data-bs-toggle="modal": registers trigger target behavior -->
+    <!-- data-bs-target="#termsModal": maps click target to unique element ID -->
+    <button type="button" class="btn btn-success btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#termsModal">
+      View Terms of Service
+    </button>
+  </div>
+
+  <!-- Modal Component definition (Task 18.1) -->
+  <!-- class "fade": enables smooth opacity slide transitions -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        
+        <!-- Header -->
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title fw-bold" id="termsModalLabel">Portal Terms & Conditions</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <!-- Body (Scrollable content) -->
+        <div class="modal-body text-start">
+          <h6 class="fw-bold text-dark">1. Privacy Policy</h6>
+          <p class="text-muted small">
+            We value your privacy. Email addresses and phone numbers provided during registration are strictly used for community announcements and are never sold or shared with third parties.
+          </p>
+          
+          <h6 class="fw-bold text-dark mt-3">2. Conduct Code</h6>
+          <p class="text-muted small">
+            Greenwood is a friendly, collaborative community. Portal members are expected to interact respectfully in discussion feeds and coordinate cleanup efforts politely.
+          </p>
+
+          <h6 class="fw-bold text-dark mt-3">3. Co-Working Fair Use</h6>
+          <p class="text-muted small">
+            Desks and meeting room space reservations must be respected. Please cancel bookings you cannot attend so other members have an opportunity to utilize the workspace facilities.
+          </p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success btn-sm px-3" onclick="alert('Terms Accepted!');" data-bs-dismiss="modal">I Agree</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 18.1: Modal Popup",
+    "description": "Create a modal popup triggered by a button, utilizing Bootstrap 5 interactive transition states.",
+    "classes": [".modal", ".fade", ".modal-dialog", ".modal-dialog-centered", ".modal-dialog-scrollable", ".modal-content", ".modal-header", ".modal-title", ".modal-body", ".modal-footer", ".btn-close", ".btn-close-white", ".btn-success", ".btn-secondary"],
+    "responsive": "Modal automatically scales its maximum width dynamically based on breakpoints and scrollable body height constraints.",
+    "comments": "The terms modal combines centered positioning (.modal-dialog-centered) and internal scrollbars (.modal-dialog-scrollable) for clean scrolling on long text files."
+  }
+  </script>
+</body>
+</html>

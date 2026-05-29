@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 15.1: Border Utilities on Image</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center py-4">
+    <h2 class="fw-bold mb-3">Border Utilities Showcase</h2>
+    <p class="text-muted mb-5">Applying borders, colors, thickness, and shapes to image components.</p>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-4 shadow-sm border-0">
+          
+          <!-- Image with requested border utilities (Task 15.1) -->
+          <!-- border: adds default border wrapper -->
+          <!-- border-primary: sets border color to primary (blue) -->
+          <!-- border-3: sets thickness to 3px -->
+          <!-- rounded-circle: makes image circular -->
+          <div class="mb-4">
+            <img src="../assets/images/profile.png" class="border border-primary border-3 rounded-circle shadow-sm" style="width: 150px; height: 150px; object-fit: cover;" alt="John Doe profile photo">
+          </div>
+
+          <h5 class="fw-bold mb-2">Marcus Vance</h5>
+          <p class="text-muted small mb-3">Greenwood Hub Coordinator</p>
+          
+          <div class="bg-light p-3 rounded text-start">
+            <span class="small font-monospace text-dark d-block mb-1">Classes Applied:</span>
+            <code class="d-block text-primary small">.border</code>
+            <code class="d-block text-primary small">.border-primary</code>
+            <code class="d-block text-primary small">.border-3</code>
+            <code class="d-block text-primary small">.rounded-circle</code>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 15.1: Borders & Circles",
+    "description": "Add border utilities like border, border-primary, border-3, and rounded-circle to an image.",
+    "classes": [".border", ".border-primary", ".border-3", ".rounded-circle", ".container", ".card", ".shadow-sm", ".bg-light", ".font-monospace"],
+    "responsive": "Layout remains centered and responsive across all device sizes. Image boundaries scale cleanly.",
+    "comments": "The rounded-circle class works best when the image element has equal width and height attributes, preventing distortional stretching."
+  }
+  </script>
+</body>
+</html>

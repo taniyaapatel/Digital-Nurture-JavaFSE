@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 14.1: Responsive Display & Visibility</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .display-box {
+      border-radius: 8px;
+      padding: 25px;
+      text-align: center;
+      margin-bottom: 20px;
+      border: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Responsive Display States</h2>
+    <p class="text-muted mb-5">Hide or show layout containers based on the width of the screen.</p>
+
+    <!-- 1. Mobile-Only Banner (Task 14.1) -->
+    <!-- d-block: visible on extra-small/mobile -->
+    <!-- d-md-none: hides this block on medium screens (tablets) and larger -->
+    <div class="display-box bg-danger-subtle text-danger d-block d-md-none">
+      <h5 class="fw-bold mb-2">Mobile Viewport Active</h5>
+      <p class="mb-0 small">This red banner is configured with <code>.d-block .d-md-none</code>. It is only visible on mobile screens.</p>
+    </div>
+
+    <!-- 2. Tablet & Desktop Banner (Task 14.1) -->
+    <!-- d-none: hidden by default on mobile -->
+    <!-- d-md-block: visible as block on medium screens and larger -->
+    <div class="display-box bg-primary-subtle text-primary d-none d-md-block">
+      <h5 class="fw-bold mb-2">Tablet & Desktop Viewport Active</h5>
+      <p class="mb-0 small">This blue banner is configured with <code>.d-none .d-md-block</code>. It is hidden on mobile devices.</p>
+    </div>
+
+    <!-- 3. Desktop-Only Flex Panel (Task 14.1) -->
+    <!-- d-none: hidden on mobile and tablets -->
+    <!-- d-lg-flex: visible as a flexbox layout on large desktops and up -->
+    <div class="display-box bg-success-subtle text-success d-none d-lg-flex justify-content-between align-items-center">
+      <h5 class="fw-bold mb-0">Desktop-Only Flex Banner</h5>
+      <p class="mb-0 small">Configured with <code>.d-none .d-lg-flex</code>. Spans horizontal flex on large screens only.</p>
+      <button class="btn btn-success btn-sm">Action Only on Desktop</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 14.1: Display Hide/Show",
+    "description": "Use d-none, d-md-block, and d-lg-flex display classes to hide/show sections based on screen size.",
+    "classes": [".container", ".display-box", ".d-block", ".d-md-none", ".d-none", ".d-md-block", ".d-lg-flex", ".justify-content-between", ".align-items-center", ".bg-danger-subtle", ".bg-primary-subtle", ".bg-success-subtle"],
+    "responsive": "Responsive displays toggle visibility states. Red banner displays < 768px. Blue banner displays >= 768px. Green flex banner displays >= 992px.",
+    "comments": "Uses combinations of display utilities. Useful for replacing complex layouts (e.g. vertical tables with cards) depending on the mobile screen width."
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 16.1: Fixed Footer Positioning</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .scroll-filler {
+      height: 800px;
+      background: linear-gradient(to bottom, #f8fafc, #cbd5e1);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-light pb-5">
+
+  <div class="container py-4">
+    <h2 class="text-center fw-bold mb-3">Fixed Footer Positioning</h2>
+    <p class="text-muted text-center mb-4">Pining a footer utility bar to the bottom of the screen regardless of page scroll.</p>
+
+    <!-- Scrollable content filler to show fixed status -->
+    <div class="scroll-filler p-4 mb-5 text-center">
+      <p class="lead text-muted pt-5">
+        Scroll down to test the positioning. The dark footer remains pinned to the bottom edge of the browser window.
+      </p>
+      <p class="text-muted small">
+        (This gray box has a height of 800px to force scrolling behaviors)
+      </p>
+    </div>
+  </div>
+
+  <!-- Pinned Fixed Footer (Task 16.1) -->
+  <!-- position-fixed: detaches element from flow and pins it relative to viewport -->
+  <!-- bottom-0: pins to the bottom edge -->
+  <!-- start-0: pins to the left edge -->
+  <!-- end-0: pins to the right edge (full width) -->
+  <!-- w-100 can be used, but start-0 end-0 is a solid practice -->
+  <footer class="position-fixed bottom-0 start-0 end-0 bg-dark text-white py-3 px-4 shadow-lg d-flex justify-content-between align-items-center" style="z-index: 1030;">
+    <div>
+      <span class="small text-white-50">&copy; 2026 Greenwood Portal. All rights reserved.</span>
+    </div>
+    <div class="d-flex gap-2">
+      <span class="badge bg-success">Status: Online</span>
+      <span class="badge bg-primary">v5.3</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 16.1: Fixed Footer",
+    "description": "Create a fixed footer using position-fixed and bottom-0 layout helper classes.",
+    "classes": [".position-fixed", ".bottom-0", ".start-0", ".end-0", ".bg-dark", ".text-white", ".py-3", ".px-4", ".shadow-lg", ".d-flex", ".justify-content-between", ".align-items-center"],
+    "responsive": "Panned bar remains aligned horizontally and spans 100% viewport width across both phone and desktop screen sizes.",
+    "comments": "The start-0 and end-0 classes are combined with position-fixed to make the bar stretch full width. Added z-index to prevent other elements from overlapping it during scroll."
+  }
+  </script>
+</body>
+</html>

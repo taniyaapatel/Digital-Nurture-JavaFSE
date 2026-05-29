@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 19.2: Sass Customization Demo</title>
+  <!-- Link compiled customized Bootstrap CSS output from sass-project -->
+  <link rel="stylesheet" href="../sass-project/dist/css/custom.css">
+  <style>
+    .card-custom {
+      border: 1px solid rgba(120, 34, 211, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-primary">Sass Recompiled Custom Theme</h2>
+    <p class="text-muted mb-5 lead">Interactive showcase of overridden Bootstrap variables: Primary Color & Border Radii.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        
+        <!-- Recompiled Styled Card (Task 19.2) -->
+        <!-- Note: This card uses the customized primary and border radius compiled from SASS -->
+        <div class="card card-custom shadow-lg p-4 bg-white text-start">
+          
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold text-primary mb-0">Greenwood Premium Card</h5>
+            <!-- Custom badge styling using recompiled colors -->
+            <span class="badge bg-primary text-white px-3 py-2 fw-semibold rounded-pill">Sass Core</span>
+          </div>
+
+          <p class="text-muted small mb-4">
+            If compilation succeeded, the button and headers below are styled in a custom **Deep Purple (#7822d3)** primary color scheme, and the border corners of the buttons and card bodies display a smooth **16px** rounding profile.
+          </p>
+
+          <!-- Input layout with recompiled outline shapes -->
+          <div class="mb-4">
+            <label for="customInput" class="form-label fw-semibold text-primary small">Custom Input Border-Radius check:</label>
+            <input type="text" class="form-control" id="customInput" placeholder="Smooth corners input...">
+          </div>
+
+          <!-- Buttons displaying custom styles -->
+          <div class="d-flex gap-3">
+            <button class="btn btn-primary w-100 py-2 fw-semibold shadow-sm">Custom Primary Button</button>
+            <button class="btn btn-outline-primary w-100 py-2">Outline Option</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 19.2: Theme Rebuild",
+    "description": "Customize Bootstrap 5 primary colors and border radius variables via _variables.scss and compile. Link recompiled stylesheet to the webpage.",
+    "classes": [".card", ".btn-primary", ".btn-outline-primary", ".badge", ".bg-primary", ".form-control", ".shadow-lg", ".d-flex", ".gap-3", ".container", ".row"],
+    "responsive": "Elements maintain full flex responsiveness. Smooth border radius scaling and custom button layout alignments behave correctly across breakpoints.",
+    "comments": "Links to '../sass-project/dist/css/custom.css'. Primary variables ($primary, $border-radius) are modified in _variables.scss, compiled via Dart Sass, and loaded dynamically."
+  }
+  </script>
+</body>
+</html>

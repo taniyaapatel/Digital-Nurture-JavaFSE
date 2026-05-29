@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5.1: Grid Alignment Centering</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .centering-container {
+      min-height: 400px;
+      background-color: #e9ecef;
+      border-radius: 12px;
+      border: 2px dashed #adb5bd;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Centering Content in Grid Rows</h2>
+    <p class="text-center text-muted mb-5">Demonstrates how to center a card horizontally and vertically within a row.</p>
+
+    <!-- Outer row with minimum height, vertically and horizontally centered -->
+    <div class="row centering-container align-items-center justify-content-center p-3">
+      <div class="col-sm-8 col-md-6 col-lg-4">
+        <div class="card shadow p-4 border-0 text-center">
+          <div class="mb-3 text-success">
+            <!-- Simple placeholder icon shape -->
+            <span class="fs-1">&#10004;</span>
+          </div>
+          <h4 class="fw-bold mb-2">Success Panel</h4>
+          <p class="text-muted small">
+            This card is centered within a 400px tall dashed container using Bootstrap alignment classes. It centers perfectly on both desktop and mobile viewports.
+          </p>
+          <button class="btn btn-success btn-sm w-100">Acknowledge</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 5.1: Grid Centering",
+    "description": "Use justify-content-center and align-items-center to center content inside a row.",
+    "classes": [".container", ".row", ".align-items-center", ".justify-content-center", ".col-sm-8", ".col-md-6", ".col-lg-4", ".card", ".shadow", ".btn-success"],
+    "responsive": "The grid row is centered horizontally on all screen sizes, while the width of the centered card scales dynamically (.col-sm-8 on mobile to .col-lg-4 on larger displays).",
+    "comments": "The parent row uses .justify-content-center to align items horizontally and .align-items-center to align them vertically. A min-height style is applied to the row to demonstrate vertical spacing."
+  }
+  </script>
+</body>
+</html>

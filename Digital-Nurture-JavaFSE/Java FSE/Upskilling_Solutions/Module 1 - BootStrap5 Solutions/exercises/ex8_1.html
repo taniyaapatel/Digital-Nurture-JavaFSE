@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 8.1: Form Components Registration</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card p-4 shadow-sm border-0">
+          <h3 class="fw-bold text-center text-success mb-3">Portal Registration</h3>
+          <p class="text-center text-muted small mb-4">Create a Greenwood Community Hub account to access local benefits.</p>
+
+          <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Registration Mock Successful!');">
+            
+            <!-- Full Name (form-control) -->
+            <div class="mb-3">
+              <label for="regName" class="form-label fw-semibold">Full Name</label>
+              <input type="text" class="form-control" id="regName" placeholder="Jane Doe" required>
+            </div>
+
+            <!-- Email (input-group) -->
+            <div class="mb-3">
+              <label for="regEmail" class="form-label fw-semibold">Email Address</label>
+              <div class="input-group">
+                <span class="input-group-text" id="email-addon">@</span>
+                <input type="email" class="form-control" id="regEmail" placeholder="jane.doe@example.com" aria-describedby="email-addon" required>
+              </div>
+            </div>
+
+            <!-- Password (form-control) -->
+            <div class="mb-3">
+              <label for="regPassword" class="form-label fw-semibold">Password</label>
+              <input type="password" class="form-control" id="regPassword" placeholder="Minimum 8 characters" required>
+            </div>
+
+            <!-- Phone Number (input-group) -->
+            <div class="mb-3">
+              <label for="regPhone" class="form-label fw-semibold">Phone Number</label>
+              <div class="input-group">
+                <span class="input-group-text">+1</span>
+                <input type="tel" class="form-control" id="regPhone" placeholder="555-0199" required>
+              </div>
+            </div>
+
+            <!-- Gender Selection (form-check radios) -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold d-block">Gender</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="genderOptions" id="genderMale" value="male" required>
+                <label class="form-check-label" for="genderMale">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="genderOptions" id="genderFemale" value="female">
+                <label class="form-check-label" for="genderFemale">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="genderOptions" id="genderOther" value="other">
+                <label class="form-check-label" for="genderOther">Prefer not to say</label>
+              </div>
+            </div>
+
+            <!-- Agreement Checkbox (form-check checkbox) -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+              <label class="form-check-label text-muted small" for="agreeTerms">
+                I agree to the Greenwood community terms and newsletter subscription policies.
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-success w-100 py-2 fw-semibold shadow-sm">Submit Registration</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 8.1: Registration",
+    "description": "Create a registration form using Bootstrap form components like form-control, form-check, and input-group. Includes name, email, password, phone, gender, and checkbox.",
+    "classes": [".container", ".row", ".col-md-8", ".col-lg-6", ".card", ".mb-3", ".form-label", ".form-control", ".input-group", ".input-group-text", ".form-check", ".form-check-input", ".form-check-label", ".form-check-inline", ".btn-success"],
+    "responsive": "Form container width wraps to 50% on large desktops (.col-lg-6) and expands to fill mobile viewports, maintaining proper internal component margins.",
+    "comments": "Demonstrates the input-group classes used to attach static icons/pre-fixes to email and phone fields, and standard inline radios for gender parameters."
+  }
+  </script>
+</body>
+</html>

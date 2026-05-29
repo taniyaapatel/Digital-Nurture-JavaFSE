@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 12.2: Spacing-Optimized Pricing Section</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .pricing-card {
+      border: none;
+      border-radius: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container py-5 text-center">
+    <div class="mb-5">
+      <h2 class="fw-bold text-success display-5 mb-3">Greenwood Space Plans</h2>
+      <p class="text-muted lead max-width-600">Choose a co-working space desk plan that works best for your weekly schedule.</p>
+    </div>
+
+    <!-- Pricing Columns -->
+    <div class="row g-4 justify-content-center align-items-stretch">
+      
+      <!-- Basic Plan -->
+      <div class="col-md-4 mb-3">
+        <div class="card pricing-card h-100 shadow-sm p-4 text-start">
+          <div class="mb-4">
+            <h5 class="fw-bold text-muted mb-1 text-uppercase">Starter</h5>
+            <h2 class="fw-bold text-dark mb-0">$0<span class="fs-6 text-muted fw-normal">/month</span></h2>
+          </div>
+          <hr class="my-3 text-muted">
+          <!-- mb-4: adds spacing between feature list and button -->
+          <ul class="list-unstyled mb-4">
+            <li class="mb-3 text-muted">&#10004; Access library workspace</li>
+            <li class="mb-3 text-muted">&#10004; High-speed community Wi-Fi</li>
+            <li class="mb-3 text-muted text-decoration-line-through">&#10006; Free coffee & beverages</li>
+            <li class="mb-3 text-muted text-decoration-line-through">&#10006; Private meeting rooms</li>
+          </ul>
+          <!-- mt-auto pushes button to the bottom -->
+          <button class="btn btn-outline-success mt-auto w-100 py-2 fw-semibold">Join Starter</button>
+        </div>
+      </div>
+
+      <!-- Professional Plan (Highlighted) -->
+      <div class="col-md-4 mb-3">
+        <!-- p-5: extra padding to make the highlighted card pop out -->
+        <div class="card pricing-card h-100 shadow p-5 text-start border border-success border-2">
+          <div class="mb-4">
+            <span class="badge bg-success mb-2 text-uppercase">Popular</span>
+            <h5 class="fw-bold text-success mb-1 text-uppercase">Pro Desk</h5>
+            <h2 class="fw-bold text-dark mb-0">$25<span class="fs-6 text-muted fw-normal">/month</span></h2>
+          </div>
+          <hr class="my-3 text-muted">
+          <ul class="list-unstyled mb-4">
+            <li class="mb-3 text-dark">&#10004; Access dedicated Pro Desk</li>
+            <li class="mb-3 text-dark">&#10004; High-speed community Wi-Fi</li>
+            <li class="mb-3 text-dark">&#10004; Free coffee & beverages</li>
+            <li class="mb-3 text-muted text-decoration-line-through">&#10006; Private meeting rooms</li>
+          </ul>
+          <button class="btn btn-success mt-auto w-100 py-2 fw-semibold shadow-sm">Get Pro Access</button>
+        </div>
+      </div>
+
+      <!-- Dedicated Plan -->
+      <div class="col-md-4 mb-3">
+        <div class="card pricing-card h-100 shadow-sm p-4 text-start">
+          <div class="mb-4">
+            <h5 class="fw-bold text-muted mb-1 text-uppercase">Dedicated</h5>
+            <h2 class="fw-bold text-dark mb-0">$60<span class="fs-6 text-muted fw-normal">/month</span></h2>
+          </div>
+          <hr class="my-3 text-muted">
+          <ul class="list-unstyled mb-4">
+            <li class="mb-3 text-dark">&#10004; 24/7 Office Access</li>
+            <li class="mb-3 text-dark">&#10004; Premium Wi-Fi speed</li>
+            <li class="mb-3 text-dark">&#10004; Free coffee & beverages</li>
+            <li class="mb-3 text-dark">&#10004; Unlimited meeting rooms</li>
+          </ul>
+          <button class="btn btn-outline-success mt-auto w-100 py-2 fw-semibold">Go Dedicated</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 12.2: Pricing Section",
+    "description": "Build a pricing section where spacing improves the layout and highlights priority.",
+    "classes": [".container", ".row", ".col-md-4", ".card", ".p-4", ".p-5", ".mb-5", ".mb-4", ".mb-3", ".mb-2", ".my-3", ".mt-auto", ".list-unstyled", ".btn-success", ".btn-outline-success", ".shadow-sm", ".shadow"],
+    "responsive": "Pricings render side-by-side on desktop layouts and wrap to vertical list blocks on tablet/mobile views. Internal item heights align dynamically using .h-100.",
+    "comments": "The Pro card uses larger padding (p-5 vs p-4) and shadow to stand out. Spacing classes (mb-4 after headers, mb-3 on lists, mt-auto on buttons) ensure perfect spacing."
+  }
+  </script>
+</body>
+</html>

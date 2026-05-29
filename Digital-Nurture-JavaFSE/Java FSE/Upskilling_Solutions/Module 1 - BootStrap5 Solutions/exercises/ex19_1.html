@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 19.1: Sass Setup Guide</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container bg-white p-5 rounded shadow-sm">
+    <h2 class="fw-bold mb-3 text-success">Setting up Bootstrap 5 with Sass</h2>
+    <p class="text-muted lead mb-4">A step-by-step developer guide to initializing an NPM workspace and compiling custom SASS configurations.</p>
+    
+    <hr class="mb-4">
+
+    <!-- Step 1 -->
+    <div class="mb-4">
+      <h5 class="fw-bold text-dark mb-2">Step 1: Initialize Node Project</h5>
+      <p class="text-muted small">
+        Create your project directory and run the NPM initialization utility to generate your <code>package.json</code> file.
+      </p>
+      <pre class="bg-light p-3 rounded font-monospace text-dark"><code>npm init -y</code></pre>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="mb-4">
+      <h5 class="fw-bold text-dark mb-2">Step 2: Install Sass and Bootstrap</h5>
+      <p class="text-muted small">
+        Download and install the official Sass compiler (Dart Sass) and the Bootstrap source assets.
+      </p>
+      <pre class="bg-light p-3 rounded font-monospace text-dark"><code>npm install sass bootstrap --save-dev</code></pre>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="mb-4">
+      <h5 class="fw-bold text-dark mb-2">Step 3: Define Compile Scripts</h5>
+      <p class="text-muted small">
+        Open <code>package.json</code> and append the compilation command inside the scripts block.
+      </p>
+      <pre class="bg-light p-3 rounded font-monospace text-dark"><code>"scripts": {
+  "build-css": "sass src/scss/custom.scss dist/css/custom.css",
+  "watch-css": "sass src/scss/custom.scss dist/css/custom.css --watch"
+}</code></pre>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="mb-4">
+      <h5 class="fw-bold text-dark mb-2">Step 4: Structure SCSS Files</h5>
+      <p class="text-muted small">
+        Create <code>src/scss/custom.scss</code>. Map it to import custom variable overrides first, followed by the Bootstrap source:
+      </p>
+      <pre class="bg-light p-3 rounded font-monospace text-dark"><code>// 1. Custom variables (e.g. overrides)
+$primary: #6f42c1;
+$border-radius: 12px;
+
+// 2. Import Bootstrap source
+@import "node_modules/bootstrap/scss/bootstrap";</code></pre>
+    </div>
+
+    <div class="bg-success-subtle p-3 rounded text-success mt-4">
+      <h6 class="fw-bold mb-1">&#128161; Why use Sass?</h6>
+      <p class="mb-0 small">
+        Sass allows you to modify Bootstrap's built-in global variables directly before compilation. It avoids bloating your code with CSS overrides and generates clean, optimized stylesheets.
+      </p>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 19.1: Sass Setup",
+    "description": "Set up a Bootstrap 5 project with Sass using npm and explain the folder and compiling configurations.",
+    "classes": [".container", ".bg-white", ".p-5", ".rounded", ".shadow-sm", ".display-6", ".fw-bold", ".text-success", ".bg-success-subtle"],
+    "responsive": "Documentation columns and text elements wrapping adjust smoothly on mobile. Pre blocks overflow scroll handles code lengths.",
+    "comments": "This tutorial page sets up the developer mindset before running the SASS customization in Exercise 19.2."
+  }
+  </script>
+</body>
+</html>

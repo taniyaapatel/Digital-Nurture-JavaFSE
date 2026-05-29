@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 1.2: Local Bootstrap Setup</title>
+  <!-- Link local Bootstrap CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <!-- Responsive Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success mb-4 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Greenwood Local</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#localNavbar" aria-controls="localNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="localNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content Container with Card -->
+  <div class="container py-3">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <img src="../assets/images/workspace.png" class="card-img-top" alt="Community workspace notice">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Co-Working Space Opening</h5>
+            <p class="card-text text-muted">
+              We are excited to announce the opening of the Greenwood Co-working Space in the community center! High-speed Wi-Fi, meeting rooms, and free tea/coffee are available.
+            </p>
+            <a href="#" class="btn btn-success">Reserve a Desk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link local Bootstrap JS Bundle -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 1.2: Local Setup",
+    "description": "Set up Bootstrap using downloaded local files. Include proper folder structure, local bootstrap.min.css, bootstrap.bundle.min.js, navigation bar, and card component.",
+    "classes": [".navbar", ".navbar-expand-lg", ".navbar-dark", ".bg-success", ".container", ".card", ".card-img-top", ".card-body", ".card-title", ".card-text", ".btn", ".btn-success", ".shadow-sm", ".shadow"],
+    "responsive": "Responsive navbar collapses into a hamburger menu on small viewports. The content card uses .col-md-6 to span half-width on desktop and stacks to full-width on mobile.",
+    "comments": "This file links to the local CSS/JS copies inside our assets folder. Uses the workspace.png placeholder image for the card banner header, and incorporates a success-themed color scheme."
+  }
+  </script>
+</body>
+</html>

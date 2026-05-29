@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11.2: Media Object Layout</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Media Layout (Flexbox)</h2>
+    <p class="text-center text-muted mb-5 lead">Using Bootstrap 5 flex utilities to simulate the deprecated media object element.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card p-4 shadow-sm border-0">
+          <h5 class="fw-bold mb-4 text-success">Community Discussion Feed</h5>
+          
+          <!-- Media Object 1 (Task 11.2 Bootstrap 5 style) -->
+          <div class="d-flex align-items-start mb-4">
+            <!-- Image on the left -->
+            <div class="flex-shrink-0">
+              <img src="../assets/images/profile.png" class="rounded-circle border" style="width: 50px; height: 50px; object-fit: cover;" alt="Jane avatar">
+            </div>
+            <!-- Content on the right -->
+            <div class="flex-grow-1 ms-3">
+              <h6 class="fw-bold text-dark mb-1">Jane Miller <small class="text-muted fw-normal ms-2">2 hours ago</small></h6>
+              <p class="text-muted mb-0 small">
+                Hey everyone! The French Baking Workshop was absolutely fantastic last weekend. A big shoutout to the organizers for putting this together. The lemon tarts were delicious!
+              </p>
+            </div>
+          </div>
+
+          <!-- Media Object 2 (Task 11.2 Bootstrap 5 style) -->
+          <div class="d-flex align-items-start mb-4">
+            <!-- Image on the left -->
+            <div class="flex-shrink-0">
+              <img src="../assets/images/profile.png" class="rounded-circle border" style="width: 50px; height: 50px; object-fit: cover; filter: hue-rotate(180deg);" alt="Dave avatar">
+            </div>
+            <!-- Content on the right -->
+            <div class="flex-grow-1 ms-3">
+              <h6 class="fw-bold text-dark mb-1">Dave K. <small class="text-muted fw-normal ms-2">4 hours ago</small></h6>
+              <p class="text-muted mb-0 small">
+                Is anyone planning to join the lakeside cleanup drive this Sunday? I have extra garbage bags and grabbers if anyone needs to borrow some tools. Let me know!
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 11.2: Media Layout",
+    "description": "Design a media object layout using flex utilities. Aligns an image to the left of the content.",
+    "classes": [".d-flex", ".align-items-start", ".flex-shrink-0", ".flex-grow-1", ".ms-3", ".rounded-circle", ".border", ".card", ".shadow-sm", ".text-muted"],
+    "responsive": "Maintains side-by-side positioning of profile image and content. Content scales dynamically within the available container width.",
+    "comments": "Since .media was deprecated in Bootstrap 5, we use .d-flex combined with .flex-shrink-0 (preventing image collapse) and .flex-grow-1 (fitting remaining area) to achieve identical layouts."
+  }
+  </script>
+</body>
+</html>

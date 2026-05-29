@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4.1: Two-Column Sidebar Layout</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <div class="container py-4">
+    <div class="row g-4">
+      
+      <!-- Sidebar Navigation (Task 4.1) -->
+      <aside class="col-md-3">
+        <div class="card p-3 shadow-sm border-0">
+          <h5 class="fw-bold text-success mb-3">Notice Portal</h5>
+          <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action active bg-success border-success">All Announcements</a>
+            <a href="#" class="list-group-item list-group-item-action">Townhall Meeting</a>
+            <a href="#" class="list-group-item list-group-item-action">Social Events</a>
+            <a href="#" class="list-group-item list-group-item-action">Volunteer Jobs</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area (Task 4.1) -->
+      <main class="col-md-9">
+        <div class="card p-4 shadow-sm border-0">
+          <h2 class="fw-bold text-dark mb-3">Community Garden Volunteers Needed</h2>
+          <p class="text-muted">Posted on May 28, 2026 by Greenwood Green Committee</p>
+          <hr>
+          <p class="lead">
+            We are looking for passionate neighbors to help plant summer vegetables, maintain paths, and build new compost bins this weekend at the Greenwood community garden.
+          </p>
+          <p>
+            No prior gardening experience is required! Tools, sunscreen, and light refreshments will be provided for all volunteers. Please meet at the community center greenhouse by 9:00 AM on Saturday.
+          </p>
+          <button class="btn btn-success mt-2">Sign Up to Volunteer</button>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 4.1: Sidebar Grid",
+    "description": "Design a two-column layout with a sidebar (col-md-3) and content area (col-md-9).",
+    "classes": [".container", ".row", ".col-md-3", ".col-md-9", ".card", ".list-group", ".list-group-item", ".active", ".bg-success", ".btn-success"],
+    "responsive": "On viewports >= 768px (medium/desktop), sidebar spans 25% (3 cols) and content area 75% (9 cols) side-by-side. On viewports < 768px (mobile/tablet), they stack vertically, each taking 100% width.",
+    "comments": "Uses semantic elements (<aside> and <main>) mapped to Bootstrap grid classes. The sidebar uses a clean list-group format inside a card."
+  }
+  </script>
+</body>
+</html>

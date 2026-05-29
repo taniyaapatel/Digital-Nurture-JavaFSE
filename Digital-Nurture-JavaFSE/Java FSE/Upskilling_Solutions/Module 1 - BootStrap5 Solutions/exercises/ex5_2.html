@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5.2: Column Reordering</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .showcase-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Responsive Column Reordering</h2>
+    <p class="text-center text-muted mb-5">Demonstrating how column order changes dynamically based on screen break points.</p>
+
+    <div class="card showcase-card shadow">
+      <div class="row g-0">
+        
+        <!-- Text Column -->
+        <!-- On Mobile: Loads 2nd (default source order, below the image) -->
+        <!-- On Desktop (MD and up): Becomes 1st using order-md-1 -->
+        <div class="col-md-6 order-2 order-md-1 p-4 d-flex flex-column justify-content-center">
+          <span class="badge bg-success align-self-start mb-3">Feature Spotlight</span>
+          <h3 class="fw-bold mb-3">Greenwood Local Library</h3>
+          <p class="text-muted">
+            Our local library has added over 500 new titles this month, ranging from technical programming textbooks to contemporary fiction. Grab a membership card today and start reading!
+          </p>
+          <a href="#" class="btn btn-success align-self-start mt-2">Get Member Card</a>
+        </div>
+        
+        <!-- Image Column -->
+        <!-- On Mobile: Loads 1st (because of order-1) -->
+        <!-- On Desktop (MD and up): Becomes 2nd using order-md-2 -->
+        <div class="col-md-6 order-1 order-md-2">
+          <img src="../assets/images/workspace.png" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 250px;" alt="Library Workspace">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 5.2: Reordering",
+    "description": "Reorder columns on different screen sizes using order-md-1, order-md-2. Flips text and image columns between mobile and desktop.",
+    "classes": [".container", ".row", ".col-md-6", ".order-1", ".order-2", ".order-md-1", ".order-md-2", ".card", ".img-fluid", ".badge", ".bg-success"],
+    "responsive": "On screens < 768px (mobile), order-1 places the image on top and order-2 puts text content below. On screens >= 768px (desktops), order-md-1 moves text to the left side and order-md-2 moves the image to the right side.",
+    "comments": "This pattern prevents text from sliding below images awkwardly on mobile interfaces. The order-* classes manipulate flexbox ordering dynamically."
+  }
+  </script>
+</body>
+</html>

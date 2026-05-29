@@ -1,17 +1,17 @@
 
 public class Car {
-    String mk;
-    String md;
-    int yr;
+    String make;
+    String model;
+    int year;
 
-    public Car(String mk, String md, int yr) {
-        this.mk = mk;
-        this.md = md;
-        this.yr = yr;
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
     }
 
     public void displayDetails() {
-        System.out.println("Make: " + mk + ", Model: " + md + ", Year: " + yr);
+        System.out.println("Make: " + make + ", Model: " + model + ", Year: " + year);
     }
 
     public static void main(String[] args) {

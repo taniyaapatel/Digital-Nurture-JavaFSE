@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap-sass-customization",
+  "version": "1.0.0",
+  "description": "Custom Bootstrap 5 compiler workspace for Greenwood Community Hub",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass src/scss/custom.scss dist/css/custom.css",
+    "watch-css": "sass src/scss/custom.scss dist/css/custom.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.77.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

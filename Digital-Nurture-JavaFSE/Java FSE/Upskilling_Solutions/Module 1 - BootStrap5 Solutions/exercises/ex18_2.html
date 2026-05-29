@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 18.2: Collapsible Accordion Group</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-3">Frequently Asked Questions</h2>
+    <p class="text-muted text-center mb-5 lead">Using Bootstrap's collapsible Accordion plugin to structure FAQs.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        
+        <!-- Accordion Container (Task 18.2) -->
+        <div class="accordion shadow-sm" id="faqAccordion">
+          
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button fw-bold text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                How do I register for a co-working space desk?
+              </button>
+            </h2>
+            <!-- data-bs-parent restricts other accordion items from staying open -->
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted small">
+                To reserve a Pro Desk, navigate to the "Register Event" form in the top bar navigation. Select the desk category and choose your preferred date. Desks are free to reserve but subject to daily availability caps.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed fw-bold text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Can I propose a new neighborhood workshop?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted small">
+                Yes! We welcome new workshop hosts. Please contact the Greenwood Green Committee at committee@greenwoodhub.org with a brief outline of your proposed topic (e.g. cooking, coding, sewing, etc.) and required space setups.
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed fw-bold text-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Where do I find social media notice feeds?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body text-muted small">
+                Links to our official Facebook, Instagram, Twitter (X), and LinkedIn feeds are located directly in the footer of the portal homepage. We update listings on cleanups and food drives on these feeds weekly.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 18.2: Collapsible Accordion",
+    "description": "Create an accordion with collapsible sections using the Bootstrap JavaScript accordion components.",
+    "classes": [".accordion", ".accordion-item", ".accordion-header", ".accordion-button", ".accordion-collapse", ".collapse", ".accordion-body", ".show", ".collapsed", ".container", ".row"],
+    "responsive": "Accordion panel stretches or shrinks smoothly based on grid column wrappers, adjusting line heights on mobile boundaries.",
+    "comments": "The data-bs-parent attribute ensures that when a new accordion card expands, the currently open card collapses automatically, maintaining page vertical space."
+  }
+  </script>
+</body>
+</html>

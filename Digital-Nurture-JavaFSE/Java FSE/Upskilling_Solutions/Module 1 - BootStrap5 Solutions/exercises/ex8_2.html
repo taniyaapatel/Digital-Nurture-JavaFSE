@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 8.2: Floating Label Login Form</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-4 shadow border-0">
+          <div class="text-center mb-4">
+            <h4 class="fw-bold text-success mb-1">Welcome Back</h4>
+            <p class="text-muted small">Log in to manage your local portal activities.</p>
+          </div>
+
+          <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Login Mock Completed!');">
+            
+            <!-- Email Input (form-floating) -->
+            <!-- Note: The placeholder must be defined and non-empty for floating label styling to work -->
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+              <label for="floatingEmail">Email address</label>
+            </div>
+
+            <!-- Password Input (form-floating) -->
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+              <label for="floatingPassword">Password</label>
+            </div>
+
+            <!-- Remember Me / Forgot Password Row -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+              </div>
+              <a href="#" class="text-success text-decoration-none small">Forgot password?</a>
+            </div>
+
+            <!-- Login Submit Button -->
+            <button type="submit" class="btn btn-success w-100 py-2 fw-semibold shadow-sm">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 8.2: Floating Login",
+    "description": "Style a login form using the Bootstrap form-floating wrapper class. Includes floating input tags, check inputs, and buttons.",
+    "classes": [".container", ".row", ".col-md-6", ".col-lg-4", ".card", ".form-floating", ".form-control", ".form-check", ".form-check-input", ".form-check-label", ".btn-success", ".shadow-sm", ".shadow"],
+    "responsive": "Adapts cleanly using column breakpoint modifiers, focusing to a single narrow grid block on tablets and desktops while stacking centered on mobile.",
+    "comments": "The form-floating class requires standard input and label tags combined in sequence. The input element must define a placeholder attribute for CSS triggers to fire correctly."
+  }
+  </script>
+</body>
+</html>

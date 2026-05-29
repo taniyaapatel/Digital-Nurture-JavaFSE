@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 12.1: Spacing Utilities</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .outer-box {
+      background-color: #e9ecef;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+    }
+    .inner-box {
+      background-color: #ffffff;
+      border: 2px dashed #10b981;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5 text-center">
+    <h2 class="fw-bold mb-4">Spacing Utilities Showcase</h2>
+    <p class="text-muted mb-5">Demonstrating margin and padding spacing blocks in action.</p>
+
+    <!-- Block 1: Padding py-5, p-2 -->
+    <!-- py-5: huge vertical padding -->
+    <div class="outer-box py-5 mb-4 shadow-sm">
+      <h5 class="fw-bold text-success mb-2">Block 1: Vertical Padding (<code>.py-5</code>)</h5>
+      <p class="text-muted small mb-3">Notice the large vertical distance between the borders and this text.</p>
+      
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="inner-box p-2">
+            <span class="small font-monospace">Padding p-2 Box</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2: Margin m-3, mt-4 -->
+    <!-- mt-4: margin-top pushes this block down from Block 1 -->
+    <div class="outer-box mt-4 p-4 shadow-sm">
+      <h5 class="fw-bold text-primary mb-3">Block 2: Margin Top & Internal Spacing</h5>
+      
+      <!-- m-3: margin all sides around this block -->
+      <div class="bg-light border rounded p-3 m-3">
+        <p class="small text-muted mb-0">
+          This box uses <code>.m-3</code> to force margin on all sides, creating spacing between itself and parent border walls.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 12.1: Margin/Padding",
+    "description": "Apply margin (m-3, mt-4) and padding (p-2, py-5) utilities on layout sections.",
+    "classes": [".container", ".py-5", ".py-4", ".p-4", ".p-3", ".p-2", ".m-3", ".mt-4", ".mb-4", ".mb-3", ".mb-2"],
+    "responsive": "Margins and paddings scale seamlessly on mobile viewports. Block structures maintain clean grid margins.",
+    "comments": "The space margins separate layout elements cleanly, while internal padding controls readability within cards."
+  }
+  </script>
+</body>
+</html>

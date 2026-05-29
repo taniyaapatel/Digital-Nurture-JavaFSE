@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11.1: Profile Card Component</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 col-md-6 col-lg-4">
+        
+        <!-- Profile Card (Task 11.1) -->
+        <div class="card shadow border-0 text-center">
+          
+          <!-- Image Top -->
+          <div class="p-4 bg-success-subtle rounded-top">
+            <img src="../assets/images/profile.png" class="rounded-circle border border-4 border-white shadow-sm" style="width: 120px; height: 120px; object-fit: cover;" alt="John Doe profile photo">
+          </div>
+          
+          <!-- Card Body -->
+          <div class="card-body px-4 py-4">
+            <h4 class="card-title fw-bold mb-1 text-dark">Marcus Vance</h4>
+            <p class="text-success small fw-semibold mb-3">Greenwood Hub Coordinator</p>
+            <p class="card-text text-muted mb-4">
+              Marcus manages the volunteer schedules, garden meetings, and co-working space notice registrations. Reach out for any site help!
+            </p>
+            <div class="d-grid gap-2">
+              <a href="mailto:marcus@greenwoodhub.org" class="btn btn-success fw-semibold">Send Message</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">View Public Profile</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 11.1: Profile Card",
+    "description": "Create a profile card using card, card-body, card-title, and card-img-top/header elements.",
+    "classes": [".card", ".card-body", ".card-title", ".card-text", ".shadow", ".rounded-circle", ".border", ".border-4", ".bg-success-subtle", ".d-grid", ".gap-2", ".btn-success", ".btn-outline-secondary"],
+    "responsive": "Card container uses responsive grid column constraints (.col-sm-8 to .col-lg-4) to scale perfectly on mobile screens, tablets, and large displays.",
+    "comments": "This card uses a customized header block housing a rounded-circle avatar instead of standard flat top images, giving a more polished profile look."
+  }
+  </script>
+</body>
+</html>

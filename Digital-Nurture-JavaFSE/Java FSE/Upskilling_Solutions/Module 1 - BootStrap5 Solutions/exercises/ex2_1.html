@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2.1: Bootstrap Structure & Files</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Bootstrap 5 Folder Structure Explained</h2>
+    <p class="text-center text-muted mb-5 lead">Understanding the core folders in a downloaded Bootstrap package.</p>
+    
+    <div class="row g-4">
+      <!-- CSS Folder Card -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-primary text-white py-3 fw-bold">
+            /css Folder
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Stylesheet Assets</h5>
+            <p class="card-text text-muted">
+              Contains the compiled CSS files. The primary file is <code>bootstrap.css</code> (or the minified version <code>bootstrap.min.css</code>).
+            </p>
+            <ul>
+              <li><strong>bootstrap.css:</strong> Main stylesheet.</li>
+              <li><strong>bootstrap.grid.css:</strong> Only the flexbox grid system.</li>
+              <li><strong>bootstrap.utilities.css:</strong> Only utility helper classes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- JS Folder Card -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-success text-white py-3 fw-bold">
+            /js Folder
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Javascript Plugins</h5>
+            <p class="card-text text-muted">
+              Contains the compiled JS files that power interactive components like modals, tooltips, dropdowns, and accordions.
+            </p>
+            <ul>
+              <li><strong>bootstrap.js:</strong> Main plugins.</li>
+              <li><strong>bootstrap.bundle.js:</strong> Includes Popper.js for tooltips/dropdowns.</li>
+              <li><strong>bootstrap.esm.js:</strong> ECMAScript Module format.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icons Folder Card -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-header bg-dark text-white py-3 fw-bold">
+            /icons Folder
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Bootstrap Icons</h5>
+            <p class="card-text text-muted">
+              A separate library containing thousands of SVG icons. Can be installed via npm or linked via CDN to render icons.
+            </p>
+            <ul>
+              <li><strong>bootstrap-icons.css:</strong> Standard web font link.</li>
+              <li><strong>SVG sprites:</strong> Inline SVG code integration.</li>
+              <li><strong>SVG files:</strong> Direct image tag mapping.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 2.1: Folder Structure",
+    "description": "Explore and explain the structure of the downloaded Bootstrap directory. Explains the purpose of the CSS, JS, and Icons folders using cards.",
+    "classes": [".container", ".row", ".g-4", ".col-md-4", ".card", ".h-100", ".card-header", ".bg-primary", ".bg-success", ".bg-dark", ".card-body", ".card-title", ".card-text"],
+    "responsive": "The column grid uses .col-md-4 classes so that cards align side-by-side on desktop but stack vertically on mobile screens.",
+    "comments": "Uses card-header colors (bg-primary, bg-success, bg-dark) to differentiate the sections. All cards are wrapped in .h-100 to ensure equal height alignment."
+  }
+  </script>
+</body>
+</html>

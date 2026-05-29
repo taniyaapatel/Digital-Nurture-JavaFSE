@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 10.2: Navigation Tabs & Pills</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Nav Tabs & Nav Pills</h2>
+    <p class="text-center text-muted mb-5 lead">Organizing page segments using standard Bootstrap navigation elements.</p>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Tabs Layout (nav-tabs) -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm border-0 h-100">
+          <h5 class="fw-bold mb-3 text-success">Tabbed Layout (<code>nav-tabs</code>)</h5>
+          
+          <!-- Nav Tabs Header -->
+          <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-pane" type="button" role="tab" aria-controls="home-pane" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-pane" type="button" role="tab" aria-controls="profile-pane" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-pane" type="button" role="tab" aria-controls="contact-pane" aria-selected="false">Contact</button>
+            </li>
+          </ul>
+          
+          <!-- Nav Tabs Content -->
+          <div class="tab-content bg-light p-3 rounded" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-pane" role="tabpanel" aria-labelledby="home-tab">
+              <p class="small text-muted mb-0"><strong>Home Content:</strong> Welcome back to your local dashboard. You have 3 notifications today.</p>
+            </div>
+            <div class="tab-pane fade" id="profile-pane" role="tabpanel" aria-labelledby="profile-tab">
+              <p class="small text-muted mb-0"><strong>Profile Content:</strong> Manage your security credentials, email frequency preferences, and membership card status.</p>
+            </div>
+            <div class="tab-pane fade" id="contact-pane" role="tabpanel" aria-labelledby="contact-tab">
+              <p class="small text-muted mb-0"><strong>Contact Content:</strong> Reach out to the site moderators via email at helpdesk@greenwoodhub.org.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pills Layout (nav-pills) -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm border-0 h-100">
+          <h5 class="fw-bold mb-3 text-primary">Pill Button Layout (<code>nav-pills</code>)</h5>
+          
+          <!-- Nav Pills Header -->
+          <ul class="nav nav-pills mb-3" id="myPills" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all-pane" type="button" role="tab" aria-controls="all-pane" aria-selected="true">All</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="unread-tab" data-bs-toggle="pill" data-bs-target="#unread-pane" type="button" role="tab" aria-controls="unread-pane" aria-selected="false">Unread</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="archived-tab" data-bs-toggle="pill" data-bs-target="#archived-pane" type="button" role="tab" aria-controls="archived-pane" aria-selected="false">Archived</button>
+            </li>
+          </ul>
+          
+          <!-- Nav Pills Content -->
+          <div class="tab-content bg-light p-3 rounded" id="myPillsContent">
+            <div class="tab-pane fade show active" id="all-pane" role="tabpanel" aria-labelledby="all-tab">
+              <p class="small text-muted mb-0"><strong>All Notices:</strong> Garden Cleanup (June 6), Farmers Market (June 7), Annual 5K Fun Run (June 13).</p>
+            </div>
+            <div class="tab-pane fade" id="unread-pane" role="tabpanel" aria-labelledby="unread-tab">
+              <p class="small text-muted mb-0"><strong>Unread Notices:</strong> High-speed Wi-Fi co-working space opening next Monday. Click to view desk registration options.</p>
+            </div>
+            <div class="tab-pane fade" id="archived-pane" role="tabpanel" aria-labelledby="archived-tab">
+              <p class="small text-muted mb-0"><strong>Archived Notices:</strong> Winter coat collection results (December 2025). Thanks to everyone for the donations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 10.2: Nav Tabs/Pills",
+    "description": "Use nav, nav-tabs, nav-pills to create tabbed navigation with interactive JS behaviors.",
+    "classes": [".container", ".nav", ".nav-tabs", ".nav-pills", ".nav-item", ".nav-link", ".tab-content", ".tab-pane", ".fade", ".show", ".active"],
+    "responsive": "On smaller screen viewports, navigation buttons automatically wrap line items while tab boxes maintain clean padding parameters.",
+    "comments": "The file configures interactive tab actions. Click events automatically manage the active state classes and trigger soft fade-in animation triggers using JavaScript."
+  }
+  </script>
+</body>
+</html>

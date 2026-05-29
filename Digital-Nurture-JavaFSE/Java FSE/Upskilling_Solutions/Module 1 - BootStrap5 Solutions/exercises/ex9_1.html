@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 9.1: Button Types</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Bootstrap Button Configurations</h2>
+    <p class="text-muted mb-5 lead">Interactive display of solid and outline button variants.</p>
+
+    <!-- Solid Buttons -->
+    <div class="card p-4 shadow-sm border-0 mb-4 text-start">
+      <h5 class="fw-bold mb-3 text-primary">Solid Buttons</h5>
+      <p class="text-muted small">Standard button variations driven by contextual background colors.</p>
+      <div class="d-flex flex-wrap gap-2">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning text-dark">Warning</button>
+        <button type="button" class="btn btn-info text-dark">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </div>
+    </div>
+
+    <!-- Outline Buttons -->
+    <div class="card p-4 shadow-sm border-0 text-start">
+      <h5 class="fw-bold mb-3 text-success">Outline Buttons</h5>
+      <p class="text-muted small">Border-accented button variations that transition to solid on hover.</p>
+      <div class="d-flex flex-wrap gap-2">
+        <button type="button" class="btn btn-outline-primary">Primary Outline</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary Outline</button>
+        <button type="button" class="btn btn-outline-success">Success Outline</button>
+        <button type="button" class="btn btn-outline-danger">Danger Outline</button>
+        <button type="button" class="btn btn-outline-warning">Warning Outline</button>
+        <button type="button" class="btn btn-outline-info">Info Outline</button>
+        <button type="button" class="btn btn-outline-dark">Dark Outline</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 9.1: Button Types",
+    "description": "Create all Bootstrap button types including primary, secondary, success, danger, warning, info, light, dark, and outline variations.",
+    "classes": [".container", ".card", ".d-flex", ".flex-wrap", ".gap-2", ".btn", ".btn-primary", ".btn-secondary", ".btn-success", ".btn-danger", ".btn-warning", ".btn-info", ".btn-light", ".btn-dark", ".btn-link", ".btn-outline-primary"],
+    "responsive": "Button grids use flexbox container wrapping (.flex-wrap) and gap spacing, reflowing gracefully across mobile and desktop boundaries.",
+    "comments": "This exercise includes link buttons and outlines. The Warning and Info solid buttons include 'text-dark' helpers for accessibility compliance."
+  }
+  </script>
+</body>
+</html>

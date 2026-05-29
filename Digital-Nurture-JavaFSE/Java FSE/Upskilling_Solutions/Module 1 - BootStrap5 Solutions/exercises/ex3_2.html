@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3.2: Grid Layout & Containers</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .grid-block {
+      background-color: #ffffff;
+      border: 1px dashed #6c757d;
+      border-radius: 6px;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <!-- Fixed-width Container -->
+  <div class="container mb-5">
+    <h3 class="fw-bold mb-3">1. Fixed-Width Container (<code>.container</code>)</h3>
+    <p class="text-muted">Centers content and provides responsive fixed widths at specific breakpoints.</p>
+    
+    <div class="row">
+      <div class="col-md-8">
+        <div class="grid-block">
+          <h5 class="fw-semibold text-primary">Main Block (8 Columns)</h5>
+          <p class="small text-muted mb-0">Best suited for articles, news feeds, or primary body content.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="grid-block">
+          <h5 class="fw-semibold text-success">Side Widget (4 Columns)</h5>
+          <p class="small text-muted mb-0">Suited for advertisement blocks, search bars, or metadata widgets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fluid Container -->
+  <div class="container-fluid px-4">
+    <h3 class="fw-bold mb-3">2. Full-Width Container (<code>.container-fluid</code>)</h3>
+    <p class="text-muted">Spans the full width of the screen, utilizing available horizontal real estate.</p>
+    
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div class="grid-block">
+          <h6 class="fw-semibold text-dark">Card A (3 Cols)</h6>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="grid-block">
+          <h6 class="fw-semibold text-dark">Card B (3 Cols)</h6>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="grid-block">
+          <h6 class="fw-semibold text-dark">Card C (3 Cols)</h6>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="grid-block">
+          <h6 class="fw-semibold text-dark">Card D (3 Cols)</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 3.2: Grid Containers",
+    "description": "Use .container, .row, and .col-* classes appropriately for responsive design. Visualizes both fixed and fluid grid containers.",
+    "classes": [".container", ".container-fluid", ".row", ".col-md-8", ".col-md-4", ".col-sm-6", ".col-md-3", ".px-4"],
+    "responsive": ".container adjusts its maximum width at breakpoints (540px, 720px, 960px, 1140px, 1320px). .container-fluid remains at 100% width across all screens. Columns stack on mobile and expand side-by-side on larger screens.",
+    "comments": "Contains two examples: a standard 2-column content-sidebar layout (8-4 grid) inside a fixed-width container, and a 4-column layout inside a fluid container."
+  }
+  </script>
+</body>
+</html>

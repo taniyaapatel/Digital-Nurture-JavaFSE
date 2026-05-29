@@ -1,0 +1,291 @@
+/*
+  Greenwood Bootstrap 5 Workspace Portal Style
+  Theme: Sleek Dark / Slate Aesthetic with Vibrant Green accents
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #0f172a;
+  --bg-sidebar: #1e293b;
+  --bg-card: #1e293b90;
+  --border-color: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #10b981;
+  --accent-hover: #059669;
+  --sidebar-width: 280px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.portal-sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.sidebar-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-header h2 span {
+  color: var(--accent-color);
+}
+
+.sidebar-header p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.sidebar-menu {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px 10px;
+}
+
+.menu-group-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 15px 0 8px 10px;
+  letter-spacing: 1px;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-item-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.menu-item-btn:hover {
+  background-color: #33415550;
+  color: var(--text-primary);
+}
+
+.menu-item-btn.active {
+  background-color: var(--accent-color);
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.menu-item-btn .badge-pill {
+  font-size: 0.7rem;
+  background-color: #334155;
+  color: var(--text-primary);
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+.menu-item-btn.active .badge-pill {
+  background-color: #0f172a;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Main Content Area */
+.portal-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.portal-topbar {
+  padding: 15px 25px;
+  background-color: #1e293b60;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.topbar-title h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.topbar-tabs {
+  display: flex;
+  background-color: #0f172a;
+  border-radius: 8px;
+  padding: 3px;
+  border: 1px solid var(--border-color);
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  background-color: var(--accent-color);
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Workspace Frame Container */
+.portal-workspace {
+  flex-grow: 1;
+  padding: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-pane {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #1e293b30;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.workspace-pane.active {
+  display: block;
+}
+
+iframe.preview-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #ffffff;
+}
+
+.code-container {
+  width: 100%;
+  height: 100%;
+  background-color: #0f172a;
+  padding: 20px;
+  overflow: auto;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.doc-pane {
+  width: 100%;
+  height: 100%;
+  background-color: #1e293b60;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.doc-card {
+  background-color: #1e293b90;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.doc-card h3 {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 8px;
+}
+
+.doc-card p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.doc-card ul {
+  margin-left: 20px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-top: 8px;
+}
+
+.doc-card ul li {
+  margin-bottom: 6px;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}

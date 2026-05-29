@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 14.2: Tablet-and-Above Sidebar</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-3">Tablet-and-Above Sidebar</h2>
+    <p class="text-center text-muted mb-5">Demonstrating sidebar display toggling: hidden on mobile, visible on tablets/desktops.</p>
+
+    <div class="row g-4">
+      
+      <!-- Responsive Sidebar (Task 14.2) -->
+      <!-- col-md-3: takes 3 columns (25% width) on medium screens and up -->
+      <!-- d-none: hidden by default on mobile (xs and sm) -->
+      <!-- d-md-block: displays as block on medium screens and up -->
+      <aside class="col-md-3 d-none d-md-block">
+        <div class="card p-3 shadow-sm border-0 bg-white">
+          <h6 class="fw-bold text-success mb-3 text-uppercase">Navigation</h6>
+          <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+              <a class="nav-link active bg-success text-white rounded p-2" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark p-2" href="#">Messages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark p-2" href="#">Settings</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <!-- col-12: spans full-width (12 columns) on mobile -->
+      <!-- col-md-9: spans 9 columns on medium screens and up -->
+      <main class="col-12 col-md-9">
+        <div class="card p-4 shadow-sm border-0 bg-white">
+          <h3 class="fw-bold mb-3">Community Hub Workspace</h3>
+          <p class="text-muted">
+            The left sidebar contains quick navigation links. If you are viewing this page on a mobile device, the sidebar is completely hidden (<code>d-none</code>) to conserve valuable screen space, and this content area expands to fill 100% width.
+          </p>
+          <p class="mb-0">
+            Try resizing the browser window past the <strong>768px (md)</strong> breakpoint boundary to watch the sidebar slide in and out of the layout dynamically.
+          </p>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 14.2: Tablet Sidebar",
+    "description": "Create a responsive sidebar that only shows on tablets and above using display classes.",
+    "classes": [".container", ".row", ".col-12", ".col-md-3", ".col-md-9", ".d-none", ".d-md-block", ".card", ".shadow-sm"],
+    "responsive": "On viewports < 768px (mobile), the sidebar is hidden (d-none) and content expands to full-width (col-12). On viewports >= 768px (tablets and desktops), the sidebar appears (d-md-block) taking 3 columns and content shrinks to 9 columns.",
+    "comments": "This responsive layout is standard for modern web design, eliminating clunky sidebar menus on small mobile screens without needing javascript toggle listeners."
+  }
+  </script>
+</body>
+</html>

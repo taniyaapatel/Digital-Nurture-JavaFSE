@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 10.1: Full Responsive Navbar</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <!-- Main Navigation Header (Task 10.1) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+    <div class="container">
+      
+      <!-- Brand Logo -->
+      <a class="navbar-brand fw-bold" href="#">
+        <span class="text-warning">&#127794;</span> Greenwood Portal
+      </a>
+      
+      <!-- Mobile Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainPortalNavbar" aria-controls="mainPortalNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse Wrapper -->
+      <div class="collapse navbar-collapse" id="mainPortalNavbar">
+        <!-- Navigation Links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Announcements</a>
+          </li>
+          
+          <!-- Dropdown Navigation -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="portalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="portalDropdown">
+              <li><a class="dropdown-item" href="#">Community Garden</a></li>
+              <li><a class="dropdown-item" href="#">Co-Working Space</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Emergency Contacts</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Inline Search Form -->
+        <form class="d-flex" role="search" onsubmit="event.preventDefault(); alert('Search triggered for: ' + this.elements.searchQ.value);">
+          <input class="form-control me-2" type="search" name="searchQ" placeholder="Search events..." aria-label="Search" required>
+          <button class="btn btn-warning text-dark fw-semibold" type="submit">Search</button>
+        </form>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Dummy Body Context -->
+  <div class="container py-5 text-center">
+    <h2 class="fw-bold mb-3">Navbar Demo Container</h2>
+    <p class="text-muted">Collapse or expand the viewport width to test the navbar responsive toggles.</p>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 10.1: Full Navbar",
+    "description": "Create a responsive navbar with a logo, navigation links, a dropdown, a search form, and a mobile collapse menu.",
+    "classes": [".navbar", ".navbar-expand-lg", ".navbar-dark", ".bg-success", ".container", ".navbar-brand", ".navbar-toggler", ".navbar-toggler-icon", ".collapse", ".navbar-collapse", ".navbar-nav", ".nav-item", ".nav-link", ".dropdown", ".dropdown-toggle", ".dropdown-menu", ".dropdown-item", ".dropdown-divider", ".d-flex", ".form-control", ".btn-warning"],
+    "responsive": "Collapses to a hamburger toggle menu on devices < 992px (large/desktop breakpoint). Search bar and dropdowns align stacked in mobile panel.",
+    "comments": "The navbar is configured with bg-success background and warning accent color button for a high-quality community aesthetic. Requires bootstrap.bundle.js for dropdowns."
+  }
+  </script>
+</body>
+</html>

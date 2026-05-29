@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3.1: Responsive Grid Columns</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .demo-box {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .demo-box:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      border-color: #10b981;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Responsive Columns Demo</h2>
+    <p class="text-center text-muted mb-5">Resize your browser window to see how columns adapt to different screen widths.</p>
+
+    <!-- Grid Row with columns (Task 3.1) -->
+    <!-- 3 columns on desktop (col-lg-4) -->
+    <!-- 2 columns on tablet (col-md-6) -->
+    <!-- 1 column on mobile (col-12) -->
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="demo-box bg-white">
+          <h4 class="fw-bold text-success">Column 1</h4>
+          <p class="text-muted mb-0">Spans 12 columns on mobile, 6 columns on tablet, and 4 columns on desktop/laptop displays.</p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="demo-box bg-white">
+          <h4 class="fw-bold text-success">Column 2</h4>
+          <p class="text-muted mb-0">Spans 12 columns on mobile, 6 columns on tablet, and 4 columns on desktop/laptop displays.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="demo-box bg-white">
+          <h4 class="fw-bold text-success">Column 3</h4>
+          <p class="text-muted mb-0">Spans 12 columns on mobile, 6 columns on tablet, and 4 columns on desktop/laptop displays.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 3.1: 3/2/1 Columns",
+    "description": "Create a container with three columns that stack vertically on mobile, two-per-row on tablets, and three-per-row on desktops.",
+    "classes": [".container", ".row", ".g-4", ".col-12", ".col-md-6", ".col-lg-4", ".bg-white", ".text-success", ".text-muted"],
+    "responsive": "On screens < 768px (mobile), columns stack vertically (100% width). On screens >= 768px and < 992px (tablets), columns adapt to a 2-per-row grid. On screens >= 992px (desktops), they take 1/3 of the row each.",
+    "comments": "The columns use combination grid breakpoints (col-12 col-md-6 col-lg-4) inside a row. Adding custom demo styles helps clearly delineate boundaries."
+  }
+  </script>
+</body>
+</html>

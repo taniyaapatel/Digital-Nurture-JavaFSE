@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-record Person(String n, int a) {}
+record Person(String name, int age) {}
 
 public class RecordDemo {
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class RecordDemo {
 
         System.out.println("\nPersons older than 18 (using stream):");
         List<Person> r = l.stream()
-                          .filter(p -> p.a() >= 18)
+                          .filter(p -> p.age() >= 18)
                           .collect(Collectors.toList());
 
         for (Person p : r) {

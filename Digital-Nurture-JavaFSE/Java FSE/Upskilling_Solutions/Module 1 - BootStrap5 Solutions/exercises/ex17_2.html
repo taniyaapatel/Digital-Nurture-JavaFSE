@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 17.2: Icon-Only Buttons</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container py-4 text-center">
+    <h2 class="fw-bold mb-3">Icon-Only Action Buttons</h2>
+    <p class="text-muted mb-5">Replacing text buttons with icon-only controls for clean administrative dashboards.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card p-4 shadow-sm border-0 bg-white text-start">
+          <h5 class="fw-bold mb-4 text-success">Manage Notice Listings</h5>
+          
+          <!-- Announcement List Table -->
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th scope="col">Announcement</th>
+                  <th scope="col" class="text-end">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row 1 -->
+                <tr>
+                  <td>
+                    <span class="fw-semibold">Community Park Cleanup</span><br>
+                    <small class="text-muted">June 6, 2026</small>
+                  </td>
+                  <!-- Icon Buttons (Task 17.2) -->
+                  <!-- Uses aria-label for accessibility screen-readers -->
+                  <td class="text-end">
+                    <button class="btn btn-outline-primary btn-sm me-1" aria-label="Edit announcement" onclick="alert('Edit clicked!');">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn btn-outline-danger btn-sm" aria-label="Delete announcement" onclick="alert('Delete clicked!');">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <td>
+                    <span class="fw-semibold">Local Farmers Market</span><br>
+                    <small class="text-muted">June 7, 2026</small>
+                  </td>
+                  <td class="text-end">
+                    <button class="btn btn-outline-primary btn-sm me-1" aria-label="Edit announcement" onclick="alert('Edit clicked!');">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn btn-outline-danger btn-sm" aria-label="Delete announcement" onclick="alert('Delete clicked!');">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <td>
+                    <span class="fw-semibold">Annual Charity 5K Run</span><br>
+                    <small class="text-muted">June 13, 2026</small>
+                  </td>
+                  <td class="text-end">
+                    <button class="btn btn-outline-primary btn-sm me-1" aria-label="Edit announcement" onclick="alert('Edit clicked!');">
+                      <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn btn-outline-danger btn-sm" aria-label="Delete announcement" onclick="alert('Delete clicked!');">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 17.2: Icon Buttons",
+    "description": "Replace text buttons with icon-only buttons using Bootstrap Icons, ensuring accessibility compliance.",
+    "classes": [".container", ".table-responsive", ".table", ".align-middle", ".btn", ".btn-outline-primary", ".btn-outline-danger", ".btn-sm", ".bi", ".bi-pencil-square", ".bi-trash", ".me-1"],
+    "responsive": "Responsive table container adjusts layout borders on mobile. Actions column remains aligned to right edge.",
+    "comments": "The icon-only buttons use standard bi icon spans. It is critical to define the 'aria-label' attribute on each button so that screen-readers can verbalize the action (e.g. 'Edit announcement')."
+  }
+  </script>
+</body>
+</html>

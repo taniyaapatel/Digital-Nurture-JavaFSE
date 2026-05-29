@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 13.2: Gradient Dark Layout</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <style>
+    .gradient-hero {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #334155;
+    }
+  </style>
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Gradient Dark Backgrounds</h2>
+    <p class="text-center text-muted mb-5">Combining dark backgrounds with linear gradients for modern premium UI elements.</p>
+
+    <!-- Dark Gradient Section (Task 13.2) -->
+    <!-- bg-dark: dark background color -->
+    <!-- bg-gradient: adds a soft semi-transparent vertical linear gradient overlay -->
+    <!-- text-white: ensures all text is clearly readable -->
+    <div class="gradient-hero bg-dark bg-gradient text-white p-5 shadow-lg text-center">
+      <div class="row justify-content-center py-4">
+        <div class="col-lg-8">
+          <span class="badge bg-success mb-3 text-uppercase fw-semibold tracking-wider">Premium Access</span>
+          <h1 class="display-5 fw-bold mb-3">Upgrade Your Greenwood Experience</h1>
+          <p class="lead text-white-50 mb-4">
+            Become a VIP Community Member today. Unlock 24/7 co-working desk access, unlimited private meeting room reservations, free parking spaces, and priority entry to all baking and music workshops.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <button class="btn btn-success btn-lg px-4 fw-semibold shadow-sm">View Desk Pricing</button>
+            <button class="btn btn-outline-light btn-lg px-4">Contact Committee</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 13.2: Gradient Dark",
+    "description": "Use bg-gradient with bg-dark and white text to create a dark gradient section layout.",
+    "classes": [".container", ".bg-dark", ".bg-gradient", ".text-white", ".text-white-50", ".badge", ".bg-success", ".btn-success", ".btn-outline-light", ".btn-lg", ".p-5", ".shadow-lg"],
+    "responsive": "Adapts cleanly to all screen widths, constraining text reading columns using .col-lg-8. Button lists wrap line layout on mobile screen borders.",
+    "comments": "The bg-gradient class applies a linear-gradient overlay from top to bottom. It softens the plain black bg-dark background to a premium, dark-grey matte texture."
+  }
+  </script>
+</body>
+</html>

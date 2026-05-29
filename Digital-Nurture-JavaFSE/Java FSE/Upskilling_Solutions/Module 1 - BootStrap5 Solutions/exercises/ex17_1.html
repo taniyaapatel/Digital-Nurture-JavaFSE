@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 17.1: Bootstrap Icons Social Footer</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <!-- Link Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .social-link {
+      font-size: 1.5rem;
+      color: #94a3b8;
+      transition: color 0.2s ease;
+    }
+    .social-link:hover {
+      color: #10b981;
+    }
+  </style>
+</head>
+<body class="bg-light pb-5">
+
+  <div class="container py-5 text-center">
+    <h2 class="fw-bold mb-3">Bootstrap Icons Integration</h2>
+    <p class="text-muted mb-5">Linking the Bootstrap Icon font library via CDN to display vector icons.</p>
+    
+    <!-- Dummy body panel -->
+    <div class="card p-5 bg-white border-0 shadow-sm mb-5">
+      <h5>Connected Community Hub</h5>
+      <p class="text-muted small">We share alerts and pictures across multiple social networks. Link to our public profiles below.</p>
+    </div>
+  </div>
+
+  <!-- Social Footer (Task 17.1) -->
+  <footer class="bg-dark text-white py-5 px-4 text-center mt-5">
+    <div class="container">
+      <div class="mb-4">
+        <!-- Facebook Icon -->
+        <a href="#" class="social-link mx-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <!-- Instagram Icon -->
+        <a href="#" class="social-link mx-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <!-- Twitter (X) Icon -->
+        <a href="#" class="social-link mx-3" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <!-- LinkedIn Icon -->
+        <a href="#" class="social-link mx-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <p class="small text-white-50 mb-0">&copy; 2026 Greenwood Community Hub. Powered by Bootstrap Icons.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Exercise Metadata for Workspace Dashboard -->
+  <script id="exercise-metadata" type="application/json">
+  {
+    "title": "Exercise 17.1: Icons Footer",
+    "description": "Install and use Bootstrap Icons in a webpage. Adds social media icons (Facebook, Instagram, Twitter, LinkedIn) in the footer.",
+    "classes": [".container", ".bg-dark", ".text-white", ".py-5", ".text-center", ".bi", ".bi-facebook", ".bi-instagram", ".bi-twitter-x", ".bi-linkedin"],
+    "responsive": "Footer handles horizontal alignment of icons cleanly, keeping equal margin spacing on mobile viewports.",
+    "comments": "Bootstrap Icons is linked using a CDN stylesheet. The individual icons are rendered inline using italics tags mapped to font class selectors."
+  }
+  </script>
+</body>
+</html>
